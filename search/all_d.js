@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['p_189',['p',['../_qconj_8m.html#a96decd642b5bfcd750aa295aec7503b9',1,'p():&#160;Qconj.m'],['../_qinv_8m.html#af5e9dade9d1d37f3350e11243ee6b0f9',1,'p():&#160;Qinv.m']]],
+  ['p1_190',['p1',['../shortest_rotation_8m.html#a9bff7262add49b40fc9e659362cac289',1,'shortestRotation.m']]],
+  ['p2_191',['p2',['../shortest_rotation_8m.html#a2151d691d0b93f0b09f1222c379a2bb7',1,'shortestRotation.m']]],
+  ['p_5fbs_192',['P_BS',['../example__forward__kinematics_8m.html#a02e068bcdf1148feddea8123d4a51e23',1,'example_forward_kinematics.m']]],
+  ['p_5fbs_5f0_193',['P_BS_0',['../example__forward__kinematics_8m.html#a74448f5cf3b062dd36818d0d82dde3a7',1,'example_forward_kinematics.m']]],
+  ['p_5fbs_5fdot_194',['P_BS_dot',['../example__forward__kinematics_8m.html#ac627011ead92a8a98225f74b955edb9d',1,'example_forward_kinematics.m']]],
+  ['p_5fbs_5fdot_5fdq_195',['P_BS_dot_dq',['../example__forward__kinematics_8m.html#af22780f13310a97741be11491fea80c4',1,'example_forward_kinematics.m']]],
+  ['p_5fbs_5fdq_196',['P_BS_dq',['../example__forward__kinematics_8m.html#adb37604cb75e878b4a82ad1bdf720993',1,'example_forward_kinematics.m']]],
+  ['p_5fe_197',['P_e',['../example__forward__kinematics_8m.html#a5a6f7a3ad94211e1edbefb56f071f65d',1,'example_forward_kinematics.m']]],
+  ['p_5felbow_5fdq_198',['P_elbow_dq',['../example__forward__kinematics_8m.html#a80fbb535c4a4bfcb53e9bd5c8022775e',1,'example_forward_kinematics.m']]],
+  ['p_5fhw_5fdot_5fdq_199',['P_HW_dot_dq',['../example__forward__kinematics_8m.html#a19b66ab20d19f00197aee60a4d0a960b',1,'example_forward_kinematics.m']]],
+  ['p_5fle_200',['P_LE',['../example__forward__kinematics_8m.html#a3aeb6dfb979d65d5a4d80f2a71d6740d',1,'example_forward_kinematics.m']]],
+  ['p_5fue_201',['P_UE',['../example__forward__kinematics_8m.html#af32752c0f9a79212597147b228004caa',1,'example_forward_kinematics.m']]],
+  ['p_5fw_202',['P_w',['../example__forward__kinematics_8m.html#afed56dfa116667abb29c9b4759a661f8',1,'example_forward_kinematics.m']]],
+  ['paral_203',['paral',['../shortest_screw_motion_8m.html#af291717af67618da278f4afbaf7a8f7c',1,'shortestScrewMotion.m']]],
+  ['parameters_204',['parameters',['../dquat2line_8m.html#aae262089a92cec6138cab3a6a9259007',1,'parameters():&#160;dquat2line.m'],['../dquat2linevel_8m.html#aae262089a92cec6138cab3a6a9259007',1,'parameters():&#160;dquat2linevel.m']]],
+  ['parameters_3a_205',['parameters:',['../screwvel2dquat_8m.html#aec97ab03335edca53ae6b190ce0ea8e7',1,'screwvel2dquat.m']]],
+  ['pos2dquat_206',['pos2dquat',['../example__forward__kinematics_8m.html#a792c65fe57aaf54ee218fe8149df7eab',1,'example_forward_kinematics.m']]],
+  ['pos2dquat_2em_207',['pos2dquat.m',['../pos2dquat_8m.html',1,'']]],
+  ['position_208',['position',['../readme_8txt.html#a03e02f43eba82559ed96a02224c8d60a',1,'position():&#160;readme.txt'],['../example__forward__kinematics_8m.html#a5e71187c6b4c75a689977538f4cb1fa6',1,'position(arm extended) of the end-effector(in body fixed shoulder centered coordinates) P_BS_0_dq:&#160;example_forward_kinematics.m']]],
+  ['position_5ftool_5f0_5fdot_209',['position_tool_0_dot',['../example__forward__kinematics_8m.html#a4c9cfde92734e47cddc6bf02b19fd2ef',1,'example_forward_kinematics.m']]],
+  ['prod_210',['prod',['../_d_qnorm_8m.html#aaf9ce36909f52ba4375bd02c156cc864',1,'DQnorm.m']]],
+  ['prodscal_211',['prodscal',['../_d_qnorm_8m.html#a467d9ec35b502068c73134657a7287d5',1,'DQnorm.m']]]
+];
