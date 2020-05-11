@@ -1,0 +1,178 @@
+\hypertarget{_d_qnorm_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/\+D\+Qnorm.m File Reference}
+\label{_d_qnorm_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/DQnorm.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/DQnorm.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+id \mbox{\hyperlink{_d_qnorm_8m_a6faa34967648c5a7e76d87a756346454}{reference\+:}} (\mbox{\hyperlink{vel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}} \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}})
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong format if \mbox{\hyperlink{_d_qnorm_8m_a199c4bfc4e2edcca3e97b779755a6be4}{sdq}} (1) $\sim$
+\item 
+if \mbox{\hyperlink{_d_qnorm_8m_a92ab6f813429cbcf82c900ecfc6055c3}{min}} (\mbox{\hyperlink{_d_qnorm_8m_a4b645b588721e3449503fd1fc585f2b8}{normq0}})
+\item 
+\mbox{\hyperlink{_d_qnorm_8m_ad042b8f3fbf589dcdfebc8f8da15b9b3}{dqn}} (1,\+:)
+\item 
+\mbox{\hyperlink{_d_qnorm_8m_a6afb28651763956257466734a310a9f8}{dqn}} (2,\+:)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{\hyperlink{_d_qnorm_8m_ae2e241427f7876098f61ed5edd9b2241}{dqn}}
+\item 
+if \mbox{\hyperlink{_d_qnorm_8m_a33b36f4975db1daead3c2ed957bf75f2}{sdq}} == \mbox{[}1 8\mbox{]}
+\item 
+if \mbox{\hyperlink{_d_qnorm_8m_a642111d43ca7a862ea2d69301d12594f}{dq}} = dq\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{_d_qnorm_8m_aae9072f2409c9ad58a775549676e9339}{n}} = \mbox{\hyperlink{screwvel2dquat_8m_aaf8f629755e54d78685ca6e5f519ffd3}{sdq}}(2)
+\item 
+\mbox{\hyperlink{_d_qnorm_8m_a3b1bff0c840e50e9a7ad5b2bea88657a}{q0}} = \mbox{\hyperlink{vel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}}(1\+:4,\+:)
+\item 
+\mbox{\hyperlink{_d_qnorm_8m_a7989bd4ae7ff762f92505b171b309f16}{q1}} = \mbox{\hyperlink{vel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}}(5\+:8,\+:)
+\item 
+\mbox{\hyperlink{_d_qnorm_8m_a4b645b588721e3449503fd1fc585f2b8}{normq0}} = Qnorm(\mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}})
+\item 
+\mbox{\hyperlink{_d_qnorm_8m_aaf9ce36909f52ba4375bd02c156cc864}{prod}} = Qmult(Qconj(\mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}}),\mbox{\hyperlink{_d_qnorm_8m_a7989bd4ae7ff762f92505b171b309f16}{q1}})+Qmult(Qconj(\mbox{\hyperlink{_d_qnorm_8m_a7989bd4ae7ff762f92505b171b309f16}{q1}}),\mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}})
+\item 
+\mbox{\hyperlink{_d_qnorm_8m_a467d9ec35b502068c73134657a7287d5}{prodscal}} = \mbox{\hyperlink{_d_qnorm_8m_aaf9ce36909f52ba4375bd02c156cc864}{prod}}(1,\+:)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_d_qnorm_8m_ad042b8f3fbf589dcdfebc8f8da15b9b3}\label{_d_qnorm_8m_ad042b8f3fbf589dcdfebc8f8da15b9b3}} 
+\index{DQnorm.m@{DQnorm.m}!dqn@{dqn}}
+\index{dqn@{dqn}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{dqn()}{dqn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dqn (\begin{DoxyParamCaption}\item[{1}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_qnorm_8m_a6afb28651763956257466734a310a9f8}\label{_d_qnorm_8m_a6afb28651763956257466734a310a9f8}} 
+\index{DQnorm.m@{DQnorm.m}!dqn@{dqn}}
+\index{dqn@{dqn}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{dqn()}{dqn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dqn (\begin{DoxyParamCaption}\item[{2}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_qnorm_8m_a92ab6f813429cbcf82c900ecfc6055c3}\label{_d_qnorm_8m_a92ab6f813429cbcf82c900ecfc6055c3}} 
+\index{DQnorm.m@{DQnorm.m}!min@{min}}
+\index{min@{min}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily if min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_d_qnorm_8m_a4b645b588721e3449503fd1fc585f2b8}{normq0}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_d_qnorm_8m_a6faa34967648c5a7e76d87a756346454}\label{_d_qnorm_8m_a6faa34967648c5a7e76d87a756346454}} 
+\index{DQnorm.m@{DQnorm.m}!reference:@{reference:}}
+\index{reference:@{reference:}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{reference:()}{reference:()}}
+{\footnotesize\ttfamily id reference\+: (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{_d_qnorm_8m_a199c4bfc4e2edcca3e97b779755a6be4}\label{_d_qnorm_8m_a199c4bfc4e2edcca3e97b779755a6be4}} 
+\index{DQnorm.m@{DQnorm.m}!sdq@{sdq}}
+\index{sdq@{sdq}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{sdq()}{sdq()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong format if sdq (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_d_qnorm_8m_a642111d43ca7a862ea2d69301d12594f}\label{_d_qnorm_8m_a642111d43ca7a862ea2d69301d12594f}} 
+\index{DQnorm.m@{DQnorm.m}!dq@{dq}}
+\index{dq@{dq}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{dq}{dq}}
+{\footnotesize\ttfamily if dq = dq\textquotesingle{}}
+
+
+
+Definition at line 22 of file D\+Qnorm.\+m.
+
+\mbox{\Hypertarget{_d_qnorm_8m_ae2e241427f7876098f61ed5edd9b2241}\label{_d_qnorm_8m_ae2e241427f7876098f61ed5edd9b2241}} 
+\index{DQnorm.m@{DQnorm.m}!dqn@{dqn}}
+\index{dqn@{dqn}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{dqn}{dqn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} dqn}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DQnorm(\mbox{\hyperlink{_d_qnorm_8m_a642111d43ca7a862ea2d69301d12594f}{dq}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\% DQNORM  dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} norm}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%   DQN = DQNORM(\mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}}) returns the norm DQN of a dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}}}
+\DoxyCodeLine{\%     -\/ \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is a dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}}. It is a 8-\/\mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} or a 8*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} array (column i}
+\DoxyCodeLine{\%        represents dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} i) where \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} is the number of dual }
+\DoxyCodeLine{\%        \mbox{\hyperlink{_d_qmult_8m_ae83dec758608827949460c3a4b114cd4}{quaternions}}.}
+\DoxyCodeLine{\%     -\/ DQN is a dual number (DQN = a0 + epsilon*b0 where a and \mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}} are real }
+\DoxyCodeLine{\%        numbers) representing the dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} norm of \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}}. It exists }
+\DoxyCodeLine{\%        only if \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}}(1:4) is different from 0.  It is a 2*N array:}
+\DoxyCodeLine{\%        For a column i}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file D\+Qnorm.\+m.
+
+\mbox{\Hypertarget{_d_qnorm_8m_aae9072f2409c9ad58a775549676e9339}\label{_d_qnorm_8m_aae9072f2409c9ad58a775549676e9339}} 
+\index{DQnorm.m@{DQnorm.m}!n@{n}}
+\index{n@{n}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} n = \mbox{\hyperlink{screwvel2dquat_8m_aaf8f629755e54d78685ca6e5f519ffd3}{sdq}}(2)}
+
+
+
+Definition at line 29 of file D\+Qnorm.\+m.
+
+\mbox{\Hypertarget{_d_qnorm_8m_a4b645b588721e3449503fd1fc585f2b8}\label{_d_qnorm_8m_a4b645b588721e3449503fd1fc585f2b8}} 
+\index{DQnorm.m@{DQnorm.m}!normq0@{normq0}}
+\index{normq0@{normq0}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{normq0}{normq0}}
+{\footnotesize\ttfamily normq0 = Qnorm(\mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}})}
+
+
+
+Definition at line 33 of file D\+Qnorm.\+m.
+
+\mbox{\Hypertarget{_d_qnorm_8m_aaf9ce36909f52ba4375bd02c156cc864}\label{_d_qnorm_8m_aaf9ce36909f52ba4375bd02c156cc864}} 
+\index{DQnorm.m@{DQnorm.m}!prod@{prod}}
+\index{prod@{prod}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{prod}{prod}}
+{\footnotesize\ttfamily prod = Qmult(Qconj(\mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}}),\mbox{\hyperlink{_d_qnorm_8m_a7989bd4ae7ff762f92505b171b309f16}{q1}})+Qmult(Qconj(\mbox{\hyperlink{_d_qnorm_8m_a7989bd4ae7ff762f92505b171b309f16}{q1}}),\mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}})}
+
+
+
+Definition at line 41 of file D\+Qnorm.\+m.
+
+\mbox{\Hypertarget{_d_qnorm_8m_a467d9ec35b502068c73134657a7287d5}\label{_d_qnorm_8m_a467d9ec35b502068c73134657a7287d5}} 
+\index{DQnorm.m@{DQnorm.m}!prodscal@{prodscal}}
+\index{prodscal@{prodscal}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{prodscal}{prodscal}}
+{\footnotesize\ttfamily prodscal = \mbox{\hyperlink{_d_qnorm_8m_aaf9ce36909f52ba4375bd02c156cc864}{prod}}(1,\+:)}
+
+
+
+Definition at line 42 of file D\+Qnorm.\+m.
+
+\mbox{\Hypertarget{_d_qnorm_8m_a3b1bff0c840e50e9a7ad5b2bea88657a}\label{_d_qnorm_8m_a3b1bff0c840e50e9a7ad5b2bea88657a}} 
+\index{DQnorm.m@{DQnorm.m}!q0@{q0}}
+\index{q0@{q0}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{q0}{q0}}
+{\footnotesize\ttfamily q0 = \mbox{\hyperlink{vel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}}(1\+:4,\+:)}
+
+
+
+Definition at line 31 of file D\+Qnorm.\+m.
+
+\mbox{\Hypertarget{_d_qnorm_8m_a7989bd4ae7ff762f92505b171b309f16}\label{_d_qnorm_8m_a7989bd4ae7ff762f92505b171b309f16}} 
+\index{DQnorm.m@{DQnorm.m}!q1@{q1}}
+\index{q1@{q1}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{q1}{q1}}
+{\footnotesize\ttfamily q1 = \mbox{\hyperlink{vel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}}(5\+:8,\+:)}
+
+
+
+Definition at line 32 of file D\+Qnorm.\+m.
+
+\mbox{\Hypertarget{_d_qnorm_8m_a33b36f4975db1daead3c2ed957bf75f2}\label{_d_qnorm_8m_a33b36f4975db1daead3c2ed957bf75f2}} 
+\index{DQnorm.m@{DQnorm.m}!sdq@{sdq}}
+\index{sdq@{sdq}!DQnorm.m@{DQnorm.m}}
+\doxysubsubsection{\texorpdfstring{sdq}{sdq}}
+{\footnotesize\ttfamily sdq == \mbox{[}1 8\mbox{]}}
+
+
+
+Definition at line 22 of file D\+Qnorm.\+m.
+

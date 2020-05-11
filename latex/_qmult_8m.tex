@@ -1,0 +1,190 @@
+\hypertarget{_qmult_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/private/\+Qmult.m File Reference}
+\label{_qmult_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/private/Qmult.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/private/Qmult.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} if \mbox{\hyperlink{_qmult_8m_a0f977b6f809cf0bc97519d12fa433de8}{sq}} (1) $\sim$
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{\hyperlink{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}{s}}
+\item 
+\mbox{\hyperlink{_qmult_8m_a5fadda31e7cec09c1ba240ad18382e08}{sr}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}{r}})
+\item 
+if \mbox{\hyperlink{_qmult_8m_a04f089891b711e1cef4ef149602770c5}{sq}} == \mbox{[}1 4\mbox{]}
+\item 
+if \mbox{\hyperlink{_qmult_8m_af30877db2cb29106639acfca6366c3d0}{q}} = q\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if \mbox{\hyperlink{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}{r}} = r\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{_qmult_8m_aedf1bc2be594a9226245566665d3921d}{nq}} = \mbox{\hyperlink{_qnorm_8m_adcbdd1947f6f14a5bad649e98c0043fe}{sq}}(2)
+\item 
+\mbox{\hyperlink{_qmult_8m_a690404535018e558b12259dac2d112c3}{nr}} = \mbox{\hyperlink{_qmult_8m_a5fadda31e7cec09c1ba240ad18382e08}{sr}}(2)
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} Implementation of the \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} multiplication \mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}} = \mbox{\hyperlink{_qconj_8m_a8e0126a6eef7e5074673979d72d553b2}{q}}(1,\+:)
+\item 
+\mbox{\hyperlink{_qmult_8m_a60b8cc8dc0099432816b634475382bb3}{qv}} = \mbox{\hyperlink{_qconj_8m_a8e0126a6eef7e5074673979d72d553b2}{q}}(2\+:4,\+:)
+\item 
+\mbox{\hyperlink{_qmult_8m_ae9391d754cca8120b109422c74bb0838}{r0}} = \mbox{\hyperlink{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}{r}}(1,\+:)
+\item 
+\mbox{\hyperlink{_qmult_8m_a115f98821af8b9ac2f97f2ac2cb2797f}{rv}} = \mbox{\hyperlink{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}{r}}(2\+:4,\+:)
+\item 
+\mbox{\hyperlink{_qmult_8m_a3a352c2235a269bac37d1a34a19cde48}{sv}} = repmat(\mbox{\hyperlink{_qmult_8m_ae9391d754cca8120b109422c74bb0838}{r0}},3,1).$\ast$\mbox{\hyperlink{_qmult_8m_a60b8cc8dc0099432816b634475382bb3}{qv}}+repmat(\mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}},3,1).$\ast$\mbox{\hyperlink{_qmult_8m_a115f98821af8b9ac2f97f2ac2cb2797f}{rv}}-\/cross(\mbox{\hyperlink{_qmult_8m_a60b8cc8dc0099432816b634475382bb3}{qv}},\mbox{\hyperlink{_qmult_8m_a115f98821af8b9ac2f97f2ac2cb2797f}{rv}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_qmult_8m_a0f977b6f809cf0bc97519d12fa433de8}\label{_qmult_8m_a0f977b6f809cf0bc97519d12fa433de8}} 
+\index{Qmult.m@{Qmult.m}!sq@{sq}}
+\index{sq@{sq}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{sq()}{sq()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} if sq (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_qmult_8m_aedf1bc2be594a9226245566665d3921d}\label{_qmult_8m_aedf1bc2be594a9226245566665d3921d}} 
+\index{Qmult.m@{Qmult.m}!nq@{nq}}
+\index{nq@{nq}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{nq}{nq}}
+{\footnotesize\ttfamily \mbox{\hyperlink{trans2dquat_8m_ab87cb8b4837baa4d0ef5ca09e444e2ad}{elseif}} nq = \mbox{\hyperlink{_qnorm_8m_adcbdd1947f6f14a5bad649e98c0043fe}{sq}}(2)}
+
+
+
+Definition at line 32 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_a690404535018e558b12259dac2d112c3}\label{_qmult_8m_a690404535018e558b12259dac2d112c3}} 
+\index{Qmult.m@{Qmult.m}!nr@{nr}}
+\index{nr@{nr}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{nr}{nr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{trans2dquat_8m_ab87cb8b4837baa4d0ef5ca09e444e2ad}{elseif}} nr = \mbox{\hyperlink{_qmult_8m_a5fadda31e7cec09c1ba240ad18382e08}{sr}}(2)}
+
+
+
+Definition at line 33 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_af30877db2cb29106639acfca6366c3d0}\label{_qmult_8m_af30877db2cb29106639acfca6366c3d0}} 
+\index{Qmult.m@{Qmult.m}!q@{q}}
+\index{q@{q}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily if q = q\textquotesingle{}}
+
+
+
+Definition at line 22 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}\label{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}} 
+\index{Qmult.m@{Qmult.m}!q0@{q0}}
+\index{q0@{q0}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{q0}{q0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} Implementation of the \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} multiplication q0 = \mbox{\hyperlink{_qconj_8m_a8e0126a6eef7e5074673979d72d553b2}{q}}(1,\+:)}
+
+
+
+Definition at line 43 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_a60b8cc8dc0099432816b634475382bb3}\label{_qmult_8m_a60b8cc8dc0099432816b634475382bb3}} 
+\index{Qmult.m@{Qmult.m}!qv@{qv}}
+\index{qv@{qv}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{qv}{qv}}
+{\footnotesize\ttfamily qv = \mbox{\hyperlink{_qconj_8m_a8e0126a6eef7e5074673979d72d553b2}{q}}(2\+:4,\+:)}
+
+
+
+Definition at line 44 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}\label{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}} 
+\index{Qmult.m@{Qmult.m}!r@{r}}
+\index{r@{r}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if r = r\textquotesingle{}}
+
+
+
+Definition at line 23 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_ae9391d754cca8120b109422c74bb0838}\label{_qmult_8m_ae9391d754cca8120b109422c74bb0838}} 
+\index{Qmult.m@{Qmult.m}!r0@{r0}}
+\index{r0@{r0}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{r0}{r0}}
+{\footnotesize\ttfamily r0 = \mbox{\hyperlink{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}{r}}(1,\+:)}
+
+
+
+Definition at line 45 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_a115f98821af8b9ac2f97f2ac2cb2797f}\label{_qmult_8m_a115f98821af8b9ac2f97f2ac2cb2797f}} 
+\index{Qmult.m@{Qmult.m}!rv@{rv}}
+\index{rv@{rv}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{rv}{rv}}
+{\footnotesize\ttfamily rv = \mbox{\hyperlink{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}{r}}(2\+:4,\+:)}
+
+
+
+Definition at line 46 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}\label{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}} 
+\index{Qmult.m@{Qmult.m}!s@{s}}
+\index{s@{s}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} s}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= Qmult(\mbox{\hyperlink{_qmult_8m_af30877db2cb29106639acfca6366c3d0}{q}},\mbox{\hyperlink{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}{r}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\%  QMULT Multiplies 2 \mbox{\hyperlink{_d_qmult_8m_ae83dec758608827949460c3a4b114cd4}{quaternions}}}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%    \mbox{\hyperlink{_d_qinv_8m_a717ca99ad5213a4c2e9a6fea0241a740}{S}} = QMULT(Q,\mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}}) returns the \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} product of Q and \mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}}. Q (resp. \mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}},}
+\DoxyCodeLine{\%      \mbox{\hyperlink{_d_qinv_8m_a717ca99ad5213a4c2e9a6fea0241a740}{S}})is a \mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{_d_qinv_8m_a2e47409fc7526f797c7a6cf7793d9f8b}{size}} 4 represeting a \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} or an array of \mbox{\hyperlink{_d_qinv_8m_a2e47409fc7526f797c7a6cf7793d9f8b}{size}}}
+\DoxyCodeLine{\%      4*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} (column i represents \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} i) where \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} is the number of}
+\DoxyCodeLine{\%      \mbox{\hyperlink{_d_qmult_8m_ae83dec758608827949460c3a4b114cd4}{quaternions}}. There are several combinations possible:}
+\DoxyCodeLine{\%       -\/ Q is a 4-\/\mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} and \mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}} is an array 4*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} ==> \mbox{\hyperlink{_d_qinv_8m_a717ca99ad5213a4c2e9a6fea0241a740}{S}} is an array 4*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}}. Q is}
+\DoxyCodeLine{\%       multiplied with each column (\mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}}) of \mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}}.}
+\DoxyCodeLine{\%       -\/ Q is an array 4*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} and \mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}} is a 4-\/\mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} ==> \mbox{\hyperlink{_d_qinv_8m_a717ca99ad5213a4c2e9a6fea0241a740}{S}} is an array 4*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}}. Each}
+\DoxyCodeLine{\%       column (\mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}}) of Q is multiplied with \mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}}.}
+\DoxyCodeLine{\%       -\/ Q and \mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}} are both arrays of \mbox{\hyperlink{_d_qinv_8m_a2e47409fc7526f797c7a6cf7793d9f8b}{size}} 4*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}}  ==> \mbox{\hyperlink{_d_qinv_8m_a717ca99ad5213a4c2e9a6fea0241a740}{S}} is an array 4*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}}. The}
+\DoxyCodeLine{\%       \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} muliplication is carried out on corresponding columns.}
+\DoxyCodeLine{\%      THE ORDER MATTERS: the quaternion muliplication is NOT commutative.}
+\DoxyCodeLine{\%      QMULT(Q,\mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}}) is different from QMULT(\mbox{\hyperlink{line2dquat_8m_aad6ea654aeeafdf06cffc20d7632f3d9}{R}},Q)}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% See also DQMULT, QCONJ}
+\DoxyCodeLine{}
+\DoxyCodeLine{sq = size(\mbox{\hyperlink{_qmult_8m_af30877db2cb29106639acfca6366c3d0}{q}})}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_a04f089891b711e1cef4ef149602770c5}\label{_qmult_8m_a04f089891b711e1cef4ef149602770c5}} 
+\index{Qmult.m@{Qmult.m}!sq@{sq}}
+\index{sq@{sq}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{sq}{sq}}
+{\footnotesize\ttfamily if sq == \mbox{[}1 4\mbox{]}}
+
+
+
+Definition at line 22 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_a5fadda31e7cec09c1ba240ad18382e08}\label{_qmult_8m_a5fadda31e7cec09c1ba240ad18382e08}} 
+\index{Qmult.m@{Qmult.m}!sr@{sr}}
+\index{sr@{sr}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{sr}{sr}}
+{\footnotesize\ttfamily sr = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{_qmult_8m_ad8d30b7c9becee527e13a7a422b5be8c}{r}})}
+
+
+
+Definition at line 21 of file Qmult.\+m.
+
+\mbox{\Hypertarget{_qmult_8m_a3a352c2235a269bac37d1a34a19cde48}\label{_qmult_8m_a3a352c2235a269bac37d1a34a19cde48}} 
+\index{Qmult.m@{Qmult.m}!sv@{sv}}
+\index{sv@{sv}!Qmult.m@{Qmult.m}}
+\doxysubsubsection{\texorpdfstring{sv}{sv}}
+{\footnotesize\ttfamily sv = repmat(\mbox{\hyperlink{_qmult_8m_ae9391d754cca8120b109422c74bb0838}{r0}},3,1).$\ast$\mbox{\hyperlink{_qmult_8m_a60b8cc8dc0099432816b634475382bb3}{qv}}+repmat(\mbox{\hyperlink{_qmult_8m_a8c29b321bb8cb83270853d2e9b4737d0}{q0}},3,1).$\ast$\mbox{\hyperlink{_qmult_8m_a115f98821af8b9ac2f97f2ac2cb2797f}{rv}}-\/cross(\mbox{\hyperlink{_qmult_8m_a60b8cc8dc0099432816b634475382bb3}{qv}},\mbox{\hyperlink{_qmult_8m_a115f98821af8b9ac2f97f2ac2cb2797f}{rv}})}
+
+
+
+Definition at line 49 of file Qmult.\+m.
+

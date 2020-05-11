@@ -1,0 +1,175 @@
+\hypertarget{shortest_rotation_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/shortest\+Rotation.m File Reference}
+\label{shortest_rotation_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/shortestRotation.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/shortestRotation.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} if \mbox{\hyperlink{shortest_rotation_8m_ad8d191a188744adb7b2515de8dbbc566}{sp1}} (1) $\sim$
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{\hyperlink{shortest_rotation_8m_a36246b88e4fc31d69777c2a4eb8e0fbe}{dq}}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{\hyperlink{dquat2_a_v_8m_aecb56061e36f1718c6c51741efa3f30f}{D\+Q\+U\+A\+T2\+R\+OT}} \mbox{\hyperlink{shortest_rotation_8m_a3196daedf06041248cc5003e47fa7890}{sp1}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{shortest_rotation_8m_a9bff7262add49b40fc9e659362cac289}{p1}})
+\item 
+\mbox{\hyperlink{shortest_rotation_8m_a0f7c3d84c0a8d835e1182ec3f45976a3}{sp2}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{shortest_rotation_8m_a2151d691d0b93f0b09f1222c379a2bb7}{p2}})
+\item 
+if \mbox{\hyperlink{shortest_rotation_8m_a9bff7262add49b40fc9e659362cac289}{p1}} = p1\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if \mbox{\hyperlink{shortest_rotation_8m_a2151d691d0b93f0b09f1222c379a2bb7}{p2}} = p2\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{shortest_rotation_8m_a291cadc593326bb9ec26519053d83ea6}{np1}} = \mbox{\hyperlink{shortest_rotation_8m_ad8d191a188744adb7b2515de8dbbc566}{sp1}}(2)
+\item 
+\mbox{\hyperlink{shortest_rotation_8m_ad14314ec7a9a63ebff1217fad8adb147}{np2}} = \mbox{\hyperlink{shortest_rotation_8m_a0f7c3d84c0a8d835e1182ec3f45976a3}{sp2}}(2)
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}{tol}} = 1e-\/5
+\item 
+\mbox{\hyperlink{shortest_rotation_8m_ab14e78649929ad59a3343d327fa21be8}{normp1}} = sqrt(sum(p1.$^\wedge$2))
+\item 
+\mbox{\hyperlink{shortest_rotation_8m_af8ed90e9de8bd44df0946d32c5269037}{normp2}} = sqrt(sum(p2.$^\wedge$2))
+\item 
+if \mbox{\hyperlink{shortest_screw_motion_8m_a0cf3c85152528bf0b77a3e63b153176c}{max}}(\mbox{\hyperlink{dquat2trans_8m_a0bc06867432ccb9d37a7776d352710b1}{abs}}(\mbox{\hyperlink{shortest_rotation_8m_ab14e78649929ad59a3343d327fa21be8}{normp1}}-\/\mbox{\hyperlink{shortest_rotation_8m_af8ed90e9de8bd44df0946d32c5269037}{normp2}})) $>$ \mbox{\hyperlink{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}{tol}} \mbox{\hyperlink{shortest_screw_motion_8m_a32cf16d0e58f24477e76f14ef8b4228d}{error}}( \textquotesingle{}Dual\+Quaternion \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{shortest_rotation_8m_ae5d233b80bed872fbd80d339e4b0065d}{minval}} = \mbox{\hyperlink{trans2dquat_8m_af454f71acbbd928a7a15b37241e278a6}{min}}(\mbox{\hyperlink{shortest_rotation_8m_ab14e78649929ad59a3343d327fa21be8}{normp1}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{shortest_rotation_8m_ad8d191a188744adb7b2515de8dbbc566}\label{shortest_rotation_8m_ad8d191a188744adb7b2515de8dbbc566}} 
+\index{shortestRotation.m@{shortestRotation.m}!sp1@{sp1}}
+\index{sp1@{sp1}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{sp1()}{sp1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} if sp1 (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{shortest_rotation_8m_a36246b88e4fc31d69777c2a4eb8e0fbe}\label{shortest_rotation_8m_a36246b88e4fc31d69777c2a4eb8e0fbe}} 
+\index{shortestRotation.m@{shortestRotation.m}!dq@{dq}}
+\index{dq@{dq}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{dq}{dq}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} dq}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= shortestRotation(\mbox{\hyperlink{shortest_rotation_8m_a9bff7262add49b40fc9e659362cac289}{p1}},\mbox{\hyperlink{shortest_rotation_8m_a2151d691d0b93f0b09f1222c379a2bb7}{p2}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\% \mbox{\hyperlink{shortest_screw_motion_8m_a770d62948148e96f97356ae630b4b548}{SHORTESTROTATION}}   constructs a \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} which represents}
+\DoxyCodeLine{\%                    the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} of smallest angle from \mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} \mbox{\hyperlink{shortest_rotation_8m_a9bff7262add49b40fc9e659362cac289}{p1}} to \mbox{\hyperlink{shortest_rotation_8m_a2151d691d0b93f0b09f1222c379a2bb7}{p2}}.}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%    \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} = \mbox{\hyperlink{shortest_screw_motion_8m_a770d62948148e96f97356ae630b4b548}{SHORTESTROTATION}}(P1,P2) returns the dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} which is }
+\DoxyCodeLine{\%     the dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} representing the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} from \mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} P1 to}
+\DoxyCodeLine{\%     \mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} P2 with the smallest \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} angle (among \mbox{\hyperlink{example__forward__kinematics_8m_a00a349297fa58bc80ff5329e25dcfe28}{all}} the possible }
+\DoxyCodeLine{\%     solutions) }
+\DoxyCodeLine{\%       -\/   P1 (resp. P2) is a 3-\/\mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} representing \mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} P1 (resp. P2)}
+\DoxyCodeLine{\%            or a 3*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} array (the i-\/th element represents the i-\/th \mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} P1 }
+\DoxyCodeLine{\%            (resp. P2)) where \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} is the number of vectors P1 (resp. P2). P1}
+\DoxyCodeLine{\%            and P2 must have the same norm.}
+\DoxyCodeLine{\%       -\/   \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is a 8*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} array representing the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}}: }
+\DoxyCodeLine{\%               DQ = [cos(\mbox{\hyperlink{_a_v2dquat_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}}/2) axis'*sin(\mbox{\hyperlink{_a_v2dquat_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}}/2) 0 0 0 0]}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% See also ROT2DQUAT}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_ae5d233b80bed872fbd80d339e4b0065d}\label{shortest_rotation_8m_ae5d233b80bed872fbd80d339e4b0065d}} 
+\index{shortestRotation.m@{shortestRotation.m}!minval@{minval}}
+\index{minval@{minval}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{minval}{minval}}
+{\footnotesize\ttfamily if \mbox{\hyperlink{shortest_screw_motion_8m_a0cf3c85152528bf0b77a3e63b153176c}{max}} (\mbox{\hyperlink{dquat2trans_8m_a0bc06867432ccb9d37a7776d352710b1}{abs}}(\mbox{\hyperlink{shortest_rotation_8m_ab14e78649929ad59a3343d327fa21be8}{normp1}}-\/\mbox{\hyperlink{shortest_rotation_8m_af8ed90e9de8bd44df0946d32c5269037}{normp2}})) $>$ \mbox{\hyperlink{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}{tol}} \mbox{\hyperlink{shortest_screw_motion_8m_a32cf16d0e58f24477e76f14ef8b4228d}{error}}(\textquotesingle{}Dual\+Quaternion \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} minval = \mbox{\hyperlink{trans2dquat_8m_af454f71acbbd928a7a15b37241e278a6}{min}}(\mbox{\hyperlink{shortest_rotation_8m_ab14e78649929ad59a3343d327fa21be8}{normp1}})}
+
+
+
+Definition at line 48 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_ab14e78649929ad59a3343d327fa21be8}\label{shortest_rotation_8m_ab14e78649929ad59a3343d327fa21be8}} 
+\index{shortestRotation.m@{shortestRotation.m}!normp1@{normp1}}
+\index{normp1@{normp1}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{normp1}{normp1}}
+{\footnotesize\ttfamily normp1 = sqrt(sum(p1.$^\wedge$2))}
+
+
+
+Definition at line 41 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_af8ed90e9de8bd44df0946d32c5269037}\label{shortest_rotation_8m_af8ed90e9de8bd44df0946d32c5269037}} 
+\index{shortestRotation.m@{shortestRotation.m}!normp2@{normp2}}
+\index{normp2@{normp2}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{normp2}{normp2}}
+{\footnotesize\ttfamily normp2 = sqrt(sum(p2.$^\wedge$2))}
+
+
+
+Definition at line 42 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_a291cadc593326bb9ec26519053d83ea6}\label{shortest_rotation_8m_a291cadc593326bb9ec26519053d83ea6}} 
+\index{shortestRotation.m@{shortestRotation.m}!np1@{np1}}
+\index{np1@{np1}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{np1}{np1}}
+{\footnotesize\ttfamily if np1 = \mbox{\hyperlink{shortest_rotation_8m_ad8d191a188744adb7b2515de8dbbc566}{sp1}}(2)}
+
+
+
+Definition at line 32 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_ad14314ec7a9a63ebff1217fad8adb147}\label{shortest_rotation_8m_ad14314ec7a9a63ebff1217fad8adb147}} 
+\index{shortestRotation.m@{shortestRotation.m}!np2@{np2}}
+\index{np2@{np2}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{np2}{np2}}
+{\footnotesize\ttfamily np2 = \mbox{\hyperlink{shortest_rotation_8m_a0f7c3d84c0a8d835e1182ec3f45976a3}{sp2}}(2)}
+
+
+
+Definition at line 33 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_a9bff7262add49b40fc9e659362cac289}\label{shortest_rotation_8m_a9bff7262add49b40fc9e659362cac289}} 
+\index{shortestRotation.m@{shortestRotation.m}!p1@{p1}}
+\index{p1@{p1}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily if p1 = p1\textquotesingle{}}
+
+
+
+Definition at line 21 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_a2151d691d0b93f0b09f1222c379a2bb7}\label{shortest_rotation_8m_a2151d691d0b93f0b09f1222c379a2bb7}} 
+\index{shortestRotation.m@{shortestRotation.m}!p2@{p2}}
+\index{p2@{p2}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{p2}{p2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if p2 = p2\textquotesingle{}}
+
+
+
+Definition at line 22 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_a3196daedf06041248cc5003e47fa7890}\label{shortest_rotation_8m_a3196daedf06041248cc5003e47fa7890}} 
+\index{shortestRotation.m@{shortestRotation.m}!sp1@{sp1}}
+\index{sp1@{sp1}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{sp1}{sp1}}
+{\footnotesize\ttfamily if sp1 = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{shortest_rotation_8m_a9bff7262add49b40fc9e659362cac289}{p1}})}
+
+
+
+Definition at line 19 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_a0f7c3d84c0a8d835e1182ec3f45976a3}\label{shortest_rotation_8m_a0f7c3d84c0a8d835e1182ec3f45976a3}} 
+\index{shortestRotation.m@{shortestRotation.m}!sp2@{sp2}}
+\index{sp2@{sp2}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{sp2}{sp2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if sp2 = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{shortest_rotation_8m_a2151d691d0b93f0b09f1222c379a2bb7}{p2}})}
+
+
+
+Definition at line 20 of file shortest\+Rotation.\+m.
+
+\mbox{\Hypertarget{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}\label{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}} 
+\index{shortestRotation.m@{shortestRotation.m}!tol@{tol}}
+\index{tol@{tol}!shortestRotation.m@{shortestRotation.m}}
+\doxysubsubsection{\texorpdfstring{tol}{tol}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} tol = 1e-\/5}
+
+
+
+Definition at line 40 of file shortest\+Rotation.\+m.
+
