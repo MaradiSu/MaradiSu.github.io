@@ -1,0 +1,189 @@
+\hypertarget{transvel2dquat_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/transvel2dquat.m File Reference}
+\label{transvel2dquat_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/transvel2dquat.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/transvel2dquat.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if \mbox{\hyperlink{transvel2dquat_8m_ab148bcc917624cb5ac88e39fb482472e}{sspeed}} (1) $>$ 1
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} normalization of the \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} (if necessary) \mbox{\hyperlink{vel2dquat_8m_aae9072f2409c9ad58a775549676e9339}{n}}
+\item 
+\mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} (\+:, \mbox{\hyperlink{transvel2dquat_8m_a08c11c70fac93920e99849bbc2c8331d}{indnot0}})
+\item 
+\mbox{\hyperlink{transvel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}} (6\+:8,\+:)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{\hyperlink{transvel2dquat_8m_abcab62525fc535bacba779e434e7d0e7}{dq}}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} T\+R\+A\+N\+S2\+D\+Q\+U\+AT \mbox{\hyperlink{transvel2dquat_8m_a2c4aa155641c59e8f06fa2f081d10501}{sspeed}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}})
+\item 
+\mbox{\hyperlink{transvel2dquat_8m_a877746883ba648c97334eaa2561e6eac}{saxis}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}})
+\item 
+if \mbox{\hyperlink{transvel2dquat_8m_a94ef9cbe838c98d5ca15beed373064be}{axis}} = axis\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}} = speed\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{transvel2dquat_8m_addcb9c8284886c60448c355d13d38082}{nspeed}} = \mbox{\hyperlink{transvel2dquat_8m_ab148bcc917624cb5ac88e39fb482472e}{sspeed}}(2)
+\item 
+\mbox{\hyperlink{transvel2dquat_8m_a217df533cc05268cfc4942dc5472871a}{naxis}} = \mbox{\hyperlink{transvel2dquat_8m_a877746883ba648c97334eaa2561e6eac}{saxis}}(2)
+\item 
+\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}} = sum(axis.$^\wedge$2).$^\wedge$0.\+5
+\item 
+\mbox{\hyperlink{transvel2dquat_8m_a08c11c70fac93920e99849bbc2c8331d}{indnot0}} = find(\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}}$>$0)
+\item 
+\mbox{\hyperlink{transvel2dquat_8m_a5cbfe7a2b97b837e4ee6c2bc4711d867}{speedtab}} = repmat(\mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}},3,1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}\label{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!axis@{axis}}
+\index{axis@{axis}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{axis()}{axis()}}
+{\footnotesize\ttfamily axis (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{\mbox{\hyperlink{transvel2dquat_8m_a08c11c70fac93920e99849bbc2c8331d}{indnot0}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{transvel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}\label{transvel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!dq@{dq}}
+\index{dq@{dq}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{dq()}{dq()}}
+{\footnotesize\ttfamily dq (\begin{DoxyParamCaption}\item[{6\+:8}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{transvel2dquat_8m_ab148bcc917624cb5ac88e39fb482472e}\label{transvel2dquat_8m_ab148bcc917624cb5ac88e39fb482472e}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!sspeed@{sspeed}}
+\index{sspeed@{sspeed}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{sspeed()}{sspeed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if sspeed (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}\label{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!vector@{vector}}
+\index{vector@{vector}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} normalization of the \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} vector (\begin{DoxyParamCaption}\item[{if}]{necessary }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{transvel2dquat_8m_a94ef9cbe838c98d5ca15beed373064be}\label{transvel2dquat_8m_a94ef9cbe838c98d5ca15beed373064be}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!axis@{axis}}
+\index{axis@{axis}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{axis}{axis}}
+{\footnotesize\ttfamily if axis = axis\textquotesingle{}}
+
+
+
+Definition at line 23 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_abcab62525fc535bacba779e434e7d0e7}\label{transvel2dquat_8m_abcab62525fc535bacba779e434e7d0e7}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!dq@{dq}}
+\index{dq@{dq}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{dq}{dq}}
+{\footnotesize\ttfamily construction of the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} dq}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= transvel2dquat(\mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}},\mbox{\hyperlink{transvel2dquat_8m_a94ef9cbe838c98d5ca15beed373064be}{axis}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\% TRANSVEL2DQUAT  constructs a translational \mbox{\hyperlink{readme_8txt_a399384428ec2b7c6f6231df43c762ec3}{velocity}} dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} }
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%    \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} = TRANSVEL2DQUAT(SPEED,\mbox{\hyperlink{dquat2rot_8m_a200a758e2979dbdc4618835707f3bb10}{AXIS}}) returns the dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} which }
+\DoxyCodeLine{\%     is the dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} representation of the translational \mbox{\hyperlink{readme_8txt_a399384428ec2b7c6f6231df43c762ec3}{velocity}} }
+\DoxyCodeLine{\%     of \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}} SPEED along the \mbox{\hyperlink{transvel2dquat_8m_a94ef9cbe838c98d5ca15beed373064be}{axis}} \mbox{\hyperlink{dquat2rot_8m_a200a758e2979dbdc4618835707f3bb10}{AXIS}}. }
+\DoxyCodeLine{\%       -\/   SPEED represents the translational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}}. It is a scalar or a}
+\DoxyCodeLine{\%               \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}}-\/\mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} (the i-\/th element represents the translational}
+\DoxyCodeLine{\%               \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}} of the i-\/th translational \mbox{\hyperlink{readme_8txt_a399384428ec2b7c6f6231df43c762ec3}{velocity}}) where \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} is the}
+\DoxyCodeLine{\%               number of translational velocities.}
+\DoxyCodeLine{\%       -\/   \mbox{\hyperlink{dquat2rot_8m_a200a758e2979dbdc4618835707f3bb10}{AXIS}} represents the translational \mbox{\hyperlink{readme_8txt_a399384428ec2b7c6f6231df43c762ec3}{velocity}} \mbox{\hyperlink{transvel2dquat_8m_a94ef9cbe838c98d5ca15beed373064be}{axis}}. It is a 3-\/\mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} }
+\DoxyCodeLine{\%               or a 3*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} array (column i represents the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{transvel2dquat_8m_a94ef9cbe838c98d5ca15beed373064be}{axis}} of }
+\DoxyCodeLine{\%               the i-\/th \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}}) where \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} is the number of translational .}
+\DoxyCodeLine{\%       -\/   \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is a 8*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} array representing the translational \mbox{\hyperlink{readme_8txt_a399384428ec2b7c6f6231df43c762ec3}{velocity}} dual }
+\DoxyCodeLine{\%              \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} [rad/\mbox{\hyperlink{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}{s}}]. NB: DQ is not a unitary dual quaternion.}
+\DoxyCodeLine{\%               DQ = [0 0 0 0 0 axis'*speed]}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% See also ROTVEL2DQUAT}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_a08c11c70fac93920e99849bbc2c8331d}\label{transvel2dquat_8m_a08c11c70fac93920e99849bbc2c8331d}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!indnot0@{indnot0}}
+\index{indnot0@{indnot0}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{indnot0}{indnot0}}
+{\footnotesize\ttfamily indnot0 = find(\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}}$>$0)}
+
+
+
+Definition at line 45 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}\label{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!n2@{n2}}
+\index{n2@{n2}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{n2}{n2}}
+{\footnotesize\ttfamily n2 = sum(axis.$^\wedge$2).$^\wedge$0.\+5}
+
+
+
+Definition at line 43 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_a217df533cc05268cfc4942dc5472871a}\label{transvel2dquat_8m_a217df533cc05268cfc4942dc5472871a}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!naxis@{naxis}}
+\index{naxis@{naxis}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{naxis}{naxis}}
+{\footnotesize\ttfamily naxis = \mbox{\hyperlink{transvel2dquat_8m_a877746883ba648c97334eaa2561e6eac}{saxis}}(2)}
+
+
+
+Definition at line 34 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_addcb9c8284886c60448c355d13d38082}\label{transvel2dquat_8m_addcb9c8284886c60448c355d13d38082}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!nspeed@{nspeed}}
+\index{nspeed@{nspeed}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{nspeed}{nspeed}}
+{\footnotesize\ttfamily if nspeed = \mbox{\hyperlink{transvel2dquat_8m_ab148bcc917624cb5ac88e39fb482472e}{sspeed}}(2)}
+
+
+
+Definition at line 33 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_a877746883ba648c97334eaa2561e6eac}\label{transvel2dquat_8m_a877746883ba648c97334eaa2561e6eac}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!saxis@{saxis}}
+\index{saxis@{saxis}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{saxis}{saxis}}
+{\footnotesize\ttfamily saxis = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}})}
+
+
+
+Definition at line 22 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}\label{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!speed@{speed}}
+\index{speed@{speed}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if speed = speed\textquotesingle{}}
+
+
+
+Definition at line 24 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_a5cbfe7a2b97b837e4ee6c2bc4711d867}\label{transvel2dquat_8m_a5cbfe7a2b97b837e4ee6c2bc4711d867}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!speedtab@{speedtab}}
+\index{speedtab@{speedtab}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{speedtab}{speedtab}}
+{\footnotesize\ttfamily speedtab = repmat(\mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}},3,1)}
+
+
+
+Definition at line 50 of file transvel2dquat.\+m.
+
+\mbox{\Hypertarget{transvel2dquat_8m_a2c4aa155641c59e8f06fa2f081d10501}\label{transvel2dquat_8m_a2c4aa155641c59e8f06fa2f081d10501}} 
+\index{transvel2dquat.m@{transvel2dquat.m}!sspeed@{sspeed}}
+\index{sspeed@{sspeed}!transvel2dquat.m@{transvel2dquat.m}}
+\doxysubsubsection{\texorpdfstring{sspeed}{sspeed}}
+{\footnotesize\ttfamily sspeed = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}})}
+
+
+
+Definition at line 21 of file transvel2dquat.\+m.
+

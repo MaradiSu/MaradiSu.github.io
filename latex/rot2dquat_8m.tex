@@ -1,0 +1,195 @@
+\hypertarget{rot2dquat_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/rot2dquat.m File Reference}
+\label{rot2dquat_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/rot2dquat.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/rot2dquat.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if \mbox{\hyperlink{rot2dquat_8m_a4735ce0c40250e1efbeae116cc8099c7}{stheta}} (1) $>$ 1
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} normalization of the \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} \mbox{\hyperlink{rot2dquat_8m_ae648bc5494cf0042aa1abf6537e018d3}{vector}} (if necessary) \mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}}
+\item 
+if \mbox{\hyperlink{rot2dquat_8m_af454f71acbbd928a7a15b37241e278a6}{min}} (\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}})
+\item 
+\mbox{\hyperlink{rot2dquat_8m_ab87cb8b4837baa4d0ef5ca09e444e2ad}{elseif}} (\mbox{\hyperlink{shortest_screw_motion_8m_a0cf3c85152528bf0b77a3e63b153176c}{max}}(\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}})$\sim$=1$\vert$$\vert$\mbox{\hyperlink{trans2dquat_8m_af454f71acbbd928a7a15b37241e278a6}{min}}(\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}})$\sim$=1) \mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}}
+\item 
+\mbox{\hyperlink{rot2dquat_8m_a9ed9a9e9e7dea72f3ba3c9cc3877d969}{dq}} (2\+:4,\+:)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{\hyperlink{rot2dquat_8m_a098b28d6a7cc000132e2b4f9d71515d8}{dq}}
+\item 
+\mbox{\hyperlink{rot2dquat_8m_ac45b4fce94e55074258996dcb155e477}{saxis}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}})
+\item 
+if \mbox{\hyperlink{rot2dquat_8m_accc088009d44c521706aa98d6387ee21}{axis}} = axis\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if \mbox{\hyperlink{rot2dquat_8m_acb2ce2071b20cf80d05cfb1aec6a6c96}{theta}} = theta\textquotesingle{}
+\item 
+\mbox{\hyperlink{rot2dquat_8m_acfcffcbcc0ea96233d34e24b81b1fa1a}{stheta}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{shortest_screw_motion_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}})
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{rot2dquat_8m_a579a36970c14898423a277fcf3625686}{ntheta}} = \mbox{\hyperlink{screwvel2dquat_8m_a63de05cd4a0692231da138c0d53b031c}{stheta}}(2)
+\item 
+\mbox{\hyperlink{rot2dquat_8m_a5cb70884682f97ee8aa7526ab9e32622}{naxis}} = \mbox{\hyperlink{transvel2dquat_8m_a877746883ba648c97334eaa2561e6eac}{saxis}}(2)
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} construction of the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} \mbox{\hyperlink{rot2dquat_8m_a497a94409660f59a53bcfc3a60bfc572}{n}} = \mbox{\hyperlink{shortest_screw_motion_8m_a0cf3c85152528bf0b77a3e63b153176c}{max}}(\mbox{\hyperlink{transvel2dquat_8m_a217df533cc05268cfc4942dc5472871a}{naxis}},\mbox{\hyperlink{screw2dquat_8m_a579a36970c14898423a277fcf3625686}{ntheta}})
+\item 
+\mbox{\hyperlink{rot2dquat_8m_a9e4d23ea1b07e75bbccecef66d43482c}{sinrep}} = repmat(\mbox{\hyperlink{shortest_screw_motion_8m_acfe9e893b920ccddcf8af30e3d5653b6}{sind}}(\mbox{\hyperlink{shortest_screw_motion_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}}/2),3,1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rot2dquat_8m_a9ed9a9e9e7dea72f3ba3c9cc3877d969}\label{rot2dquat_8m_a9ed9a9e9e7dea72f3ba3c9cc3877d969}} 
+\index{rot2dquat.m@{rot2dquat.m}!dq@{dq}}
+\index{dq@{dq}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{dq()}{dq()}}
+{\footnotesize\ttfamily dq (\begin{DoxyParamCaption}\item[{2\+:4}]{,  }\item[{\+:}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rot2dquat_8m_ab87cb8b4837baa4d0ef5ca09e444e2ad}\label{rot2dquat_8m_ab87cb8b4837baa4d0ef5ca09e444e2ad}} 
+\index{rot2dquat.m@{rot2dquat.m}!elseif@{elseif}}
+\index{elseif@{elseif}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{elseif()}{elseif()}}
+{\footnotesize\ttfamily elseif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{shortest_screw_motion_8m_a0cf3c85152528bf0b77a3e63b153176c}{max}}(\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}})$\sim$}]{ = {\ttfamily 1$\vert$$\vert$\mbox{\hyperlink{trans2dquat_8m_af454f71acbbd928a7a15b37241e278a6}{min}}(\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}})$\sim$=1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rot2dquat_8m_af454f71acbbd928a7a15b37241e278a6}\label{rot2dquat_8m_af454f71acbbd928a7a15b37241e278a6}} 
+\index{rot2dquat.m@{rot2dquat.m}!min@{min}}
+\index{min@{min}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily if min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{transvel2dquat_8m_a39d25c0ce5a0ad584a0a23810dfc8d81}{n2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rot2dquat_8m_a4735ce0c40250e1efbeae116cc8099c7}\label{rot2dquat_8m_a4735ce0c40250e1efbeae116cc8099c7}} 
+\index{rot2dquat.m@{rot2dquat.m}!stheta@{stheta}}
+\index{stheta@{stheta}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{stheta()}{stheta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if stheta (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rot2dquat_8m_ae648bc5494cf0042aa1abf6537e018d3}\label{rot2dquat_8m_ae648bc5494cf0042aa1abf6537e018d3}} 
+\index{rot2dquat.m@{rot2dquat.m}!vector@{vector}}
+\index{vector@{vector}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} normalization of the \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} vector (\begin{DoxyParamCaption}\item[{if}]{necessary }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rot2dquat_8m_accc088009d44c521706aa98d6387ee21}\label{rot2dquat_8m_accc088009d44c521706aa98d6387ee21}} 
+\index{rot2dquat.m@{rot2dquat.m}!axis@{axis}}
+\index{axis@{axis}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{axis}{axis}}
+{\footnotesize\ttfamily axis = axis\textquotesingle{}}
+
+
+
+Definition at line 31 of file rot2dquat.\+m.
+
+\mbox{\Hypertarget{rot2dquat_8m_a098b28d6a7cc000132e2b4f9d71515d8}\label{rot2dquat_8m_a098b28d6a7cc000132e2b4f9d71515d8}} 
+\index{rot2dquat.m@{rot2dquat.m}!dq@{dq}}
+\index{dq@{dq}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{dq}{dq}}
+{\footnotesize\ttfamily dq}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{example__forward__kinematics_8m_a5e93c672b13914b411f1d00ed60232f3}{rot2dquat}}(\mbox{\hyperlink{rot2dquat_8m_acb2ce2071b20cf80d05cfb1aec6a6c96}{theta}},\mbox{\hyperlink{rot2dquat_8m_accc088009d44c521706aa98d6387ee21}{axis}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\% \mbox{\hyperlink{trans2dquat_8m_abccfab65595bc1037139bb23f1e8def7}{ROT2DQUAT}}   constructs a \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} (\mbox{\hyperlink{rot2dquat_8m_acb2ce2071b20cf80d05cfb1aec6a6c96}{theta}} in [deg]!)}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%    \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} = \mbox{\hyperlink{trans2dquat_8m_abccfab65595bc1037139bb23f1e8def7}{ROT2DQUAT}}(\mbox{\hyperlink{dquat2rot_8m_a548ecf1096177595c6fafdfc8e314191}{THETA}},\mbox{\hyperlink{dquat2rot_8m_a200a758e2979dbdc4618835707f3bb10}{AXIS}}) returns the dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} which is the}
+\DoxyCodeLine{\%     dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} representation of a \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} of angle \mbox{\hyperlink{dquat2rot_8m_a548ecf1096177595c6fafdfc8e314191}{THETA}} and of }
+\DoxyCodeLine{\%     \mbox{\hyperlink{rot2dquat_8m_accc088009d44c521706aa98d6387ee21}{axis}} \mbox{\hyperlink{dquat2rot_8m_a200a758e2979dbdc4618835707f3bb10}{AXIS}}. }
+\DoxyCodeLine{\%       -\/   \mbox{\hyperlink{dquat2rot_8m_a548ecf1096177595c6fafdfc8e314191}{THETA}} represents the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} angle [deg]. It is a scalar or a}
+\DoxyCodeLine{\%               \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}}-\/\mbox{\hyperlink{rot2dquat_8m_ae648bc5494cf0042aa1abf6537e018d3}{vector}} (the i-\/th element represents the angle of the i-\/th}
+\DoxyCodeLine{\%               \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}}) where \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} is the number of rotations. }
+\DoxyCodeLine{\%       -\/   \mbox{\hyperlink{dquat2rot_8m_a200a758e2979dbdc4618835707f3bb10}{AXIS}} represents the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{rot2dquat_8m_accc088009d44c521706aa98d6387ee21}{axis}}. It is a 3-\/\mbox{\hyperlink{rot2dquat_8m_ae648bc5494cf0042aa1abf6537e018d3}{vector}} or a 3*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} }
+\DoxyCodeLine{\%               array (column i represents the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{rot2dquat_8m_accc088009d44c521706aa98d6387ee21}{axis}} of the i-\/th}
+\DoxyCodeLine{\%               \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}}) where \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} is the number of rotations.}
+\DoxyCodeLine{\%       -\/   \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is a 8*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} array representing the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}}: }
+\DoxyCodeLine{\%       Several combinations are possible:}
+\DoxyCodeLine{\%           -\/ THETA is a N-\/vector and AXIS is a 3-\/vector ==> DQ is a 8*N }
+\DoxyCodeLine{\%             array where colum i represents a dual quaternion rotation of}
+\DoxyCodeLine{\%             angle THETA(i) and of axis AXIS.}
+\DoxyCodeLine{\%           -\/ AXIS is a 3*N array and THETA is a scalar ==> DQ is a 8*N }
+\DoxyCodeLine{\%             array where colum i represents a dual quaternion rotation of}
+\DoxyCodeLine{\%             angle THETA and of axis AXIS(:,i).}
+\DoxyCodeLine{\%           -\/ THETA is a scalar and AXIS is a 3-\/vector}
+\DoxyCodeLine{\%           -\/ THETA is a N-\/vector and AXIS is a 3*N array ==> DQ is a 8*N}
+\DoxyCodeLine{\%           array where column i represents a dual quaternion rotation of}
+\DoxyCodeLine{\%           angle THETA(i) and of axis AXIS(:,i).}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% See also DQUAT2ROT, TRANS2DQUAT, SCREW2DQUAT}
+\DoxyCodeLine{}
+\DoxyCodeLine{stheta = size(\mbox{\hyperlink{rot2dquat_8m_acb2ce2071b20cf80d05cfb1aec6a6c96}{theta}})}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file rot2dquat.\+m.
+
+\mbox{\Hypertarget{rot2dquat_8m_a497a94409660f59a53bcfc3a60bfc572}\label{rot2dquat_8m_a497a94409660f59a53bcfc3a60bfc572}} 
+\index{rot2dquat.m@{rot2dquat.m}!n@{n}}
+\index{n@{n}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} construction of the \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} n = \mbox{\hyperlink{shortest_screw_motion_8m_a0cf3c85152528bf0b77a3e63b153176c}{max}}(\mbox{\hyperlink{transvel2dquat_8m_a217df533cc05268cfc4942dc5472871a}{naxis}},\mbox{\hyperlink{screw2dquat_8m_a579a36970c14898423a277fcf3625686}{ntheta}})}
+
+
+
+Definition at line 60 of file rot2dquat.\+m.
+
+\mbox{\Hypertarget{rot2dquat_8m_a5cb70884682f97ee8aa7526ab9e32622}\label{rot2dquat_8m_a5cb70884682f97ee8aa7526ab9e32622}} 
+\index{rot2dquat.m@{rot2dquat.m}!naxis@{naxis}}
+\index{naxis@{naxis}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{naxis}{naxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{trans2dquat_8m_ab87cb8b4837baa4d0ef5ca09e444e2ad}{elseif}} naxis = \mbox{\hyperlink{transvel2dquat_8m_a877746883ba648c97334eaa2561e6eac}{saxis}}(2)}
+
+
+
+Definition at line 42 of file rot2dquat.\+m.
+
+\mbox{\Hypertarget{rot2dquat_8m_a579a36970c14898423a277fcf3625686}\label{rot2dquat_8m_a579a36970c14898423a277fcf3625686}} 
+\index{rot2dquat.m@{rot2dquat.m}!ntheta@{ntheta}}
+\index{ntheta@{ntheta}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{ntheta}{ntheta}}
+{\footnotesize\ttfamily if ntheta = \mbox{\hyperlink{screwvel2dquat_8m_a63de05cd4a0692231da138c0d53b031c}{stheta}}(2)}
+
+
+
+Definition at line 41 of file rot2dquat.\+m.
+
+\mbox{\Hypertarget{rot2dquat_8m_ac45b4fce94e55074258996dcb155e477}\label{rot2dquat_8m_ac45b4fce94e55074258996dcb155e477}} 
+\index{rot2dquat.m@{rot2dquat.m}!saxis@{saxis}}
+\index{saxis@{saxis}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{saxis}{saxis}}
+{\footnotesize\ttfamily if saxis = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}})}
+
+
+
+Definition at line 30 of file rot2dquat.\+m.
+
+\mbox{\Hypertarget{rot2dquat_8m_a9e4d23ea1b07e75bbccecef66d43482c}\label{rot2dquat_8m_a9e4d23ea1b07e75bbccecef66d43482c}} 
+\index{rot2dquat.m@{rot2dquat.m}!sinrep@{sinrep}}
+\index{sinrep@{sinrep}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{sinrep}{sinrep}}
+{\footnotesize\ttfamily sinrep = repmat(\mbox{\hyperlink{shortest_screw_motion_8m_acfe9e893b920ccddcf8af30e3d5653b6}{sind}}(\mbox{\hyperlink{shortest_screw_motion_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}}/2),3,1)}
+
+
+
+Definition at line 64 of file rot2dquat.\+m.
+
+\mbox{\Hypertarget{rot2dquat_8m_acfcffcbcc0ea96233d34e24b81b1fa1a}\label{rot2dquat_8m_acfcffcbcc0ea96233d34e24b81b1fa1a}} 
+\index{rot2dquat.m@{rot2dquat.m}!stheta@{stheta}}
+\index{stheta@{stheta}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{stheta}{stheta}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} if stheta = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{shortest_screw_motion_8m_aebf487f5d315cb61f0bd86455edff1fd}{theta}})}
+
+
+
+Definition at line 32 of file rot2dquat.\+m.
+
+\mbox{\Hypertarget{rot2dquat_8m_acb2ce2071b20cf80d05cfb1aec6a6c96}\label{rot2dquat_8m_acb2ce2071b20cf80d05cfb1aec6a6c96}} 
+\index{rot2dquat.m@{rot2dquat.m}!theta@{theta}}
+\index{theta@{theta}!rot2dquat.m@{rot2dquat.m}}
+\doxysubsubsection{\texorpdfstring{theta}{theta}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} if theta = theta\textquotesingle{}}
+
+
+
+Definition at line 32 of file rot2dquat.\+m.
+

@@ -1,0 +1,1121 @@
+\hypertarget{example__forward__kinematics_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/example\+\_\+forward\+\_\+kinematics.m File Reference}
+\label{example__forward__kinematics_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/example\_forward\_kinematics.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/example\_forward\_kinematics.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+e.\+g. a fingertip, or a \mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} \mbox{\hyperlink{example__forward__kinematics_8m_acabdaf0c87511fda715130f39e7eca26}{theta\+\_\+\+UB}} ()
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_acabdaf0c87511fda715130f39e7eca26}{theta\+\_\+\+UB}}, \mbox{\hyperlink{example__forward__kinematics_8m_a6b5f63b81ea7556089cab3c8b61c0fac}{axis\+\_\+\+UB}} \mbox{\hyperlink{example__forward__kinematics_8m_a5e93c672b13914b411f1d00ed60232f3}{rot2dquat}} ()
+\item 
+\mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} specifying the \mbox{\hyperlink{screwvel2dquat_8m_a7a229a4786deeddd59c6091247a8c8a6}{offset}} between the elbow and the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} (in upper-\/arm fixed shoulder centered \% \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) \mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a3aeb6dfb979d65d5a4d80f2a71d6740d}{P\+\_\+\+LE}} \mbox{\hyperlink{example__forward__kinematics_8m_a792c65fe57aaf54ee218fe8149df7eab}{pos2dquat}} ()
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a58bf564415f69584b47ca165c071a29f}{velocity}} (see equation(18) in the article) P\+\_\+\+U\+E\+\_\+dq
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}}, P\+\_\+\+U\+E\+\_\+dq \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}} ()
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_a7a229a4786deeddd59c6091247a8c8a6}{offset}} between the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} \mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}} and the \mbox{\hyperlink{example__forward__kinematics_8m_a6a7efe8254b0758de7097fc75499cfdf}{origin}} (in the reference configuration) S\+\_\+\+LU = screw2dquat(theta\+\_\+\+HL,d\+\_\+\+HL,\mbox{\hyperlink{example__forward__kinematics_8m_a74ccb7c6c6ab0cca2a23475e02fba6b3}{axis\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_afe735437234fb6b6edff56a63cae6a15}{axispoint\+\_\+\+HL}})
+\item 
+\mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} (due to the rotational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}} only) \% \mbox{\hyperlink{dquat2linevel_8m_aae262089a92cec6138cab3a6a9259007}{parameters}} of the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} d\+\_\+\+UB=0
+\item 
+reference \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} (arm extended) of the \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector(in body fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) P\+\_\+\+B\+S\+\_\+0\+\_\+dq
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{example__forward__kinematics_8m_aa13e5d30451c147c3f9dda52f72560cb}{disp}} (\textquotesingle{}The two-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}}(in body-\/fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a20bb2a7b8a74fd0b17793f86b1a61d73}{disp}} (\mbox{\hyperlink{example__forward__kinematics_8m_a02e068bcdf1148feddea8123d4a51e23}{P\+\_\+\+BS}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ae7407794fd5465116e48a16367a58723}{disp}} (\textquotesingle{}The two-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}}(in body-\/fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a6a78068b675ce87c5d65921f9a9bc446}{disp}} (\mbox{\hyperlink{example__forward__kinematics_8m_a30ef17c931b8e28f04400b1ab6a63519}{vel\+\_\+\+P\+\_\+\+BS}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} (\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector) \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}} in hand-\/fixed \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} position\+\_\+tool\+\_\+\+HW
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a356e8fa06c69d1374df8d0c0be9118f4}{orientation\+\_\+tool\+\_\+H}}, position\+\_\+tool\+\_\+\+HW \mbox{\hyperlink{example__forward__kinematics_8m_a8544b09e26c73c19478dedcb49eb5764}{line2dquat}} ()
+\item 
+the \mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}} rate of \mbox{\hyperlink{example__forward__kinematics_8m_a1ff199e1b839f8424489df725dc8ce1d}{change}} (in hand-\/fixed \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) position\+\_\+tool\+\_\+\+H\+\_\+dot
+\item 
+the \mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} (in hand-\/fixed \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) L\+\_\+\+H\+W\+\_\+dot
+\item 
+D\+Qconj(S\+\_\+\+HL, \textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{} \mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}} ()
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a4c9cfde92734e47cddc6bf02b19fd2ef}{position\+\_\+tool\+\_\+0\+\_\+dot}} \mbox{\hyperlink{example__forward__kinematics_8m_ab6b87eada5b8da07cb94b87cd0d23ab1}{vel2dquat}} ()
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{example__forward__kinematics_8m_a4090d69aafc79f00df75cff9b1acd8c0}{disp}} (\textquotesingle{}The three-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}}(in body-\/fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_aaf1b598537d2a1b1b0c6866402863433}{disp}} (\textquotesingle{}The three-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}}(in body-\/fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a692578d7e13689bdb01209c9e4191f5b}{disp}} (\mbox{\hyperlink{example__forward__kinematics_8m_ac627011ead92a8a98225f74b955edb9d}{P\+\_\+\+B\+S\+\_\+dot}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a45cac65ff268565f4a77a592a5b7de36}{disp}} (\textquotesingle{}The three-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}}(in body-\/fixed \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a7aa4afd77b0a29dea12b7ea3d289b3ba}{disp}} (orientation\+\_\+tool\+\_\+B)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a2e6a0d03034e28e125ebee0b1d762440}{disp}} (\textquotesingle{}The three-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}} rate of \mbox{\hyperlink{example__forward__kinematics_8m_a1ff199e1b839f8424489df725dc8ce1d}{change}}(in body-\/fixed \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a00e5c24c2b2f251ac56911e1f759d1b1}{disp}} (orientation\+\_\+tool\+\_\+\+B\+\_\+dot)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+close \mbox{\hyperlink{example__forward__kinematics_8m_a00a349297fa58bc80ff5329e25dcfe28}{all}}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a3f3d3b13a15c726d6aa03db3dd0d6377}{clc}}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a129c302ea4ce7b84edcdd7ae756e6329}{choice\+\_\+arm}} = 3
+\item 
+\mbox{\hyperlink{dquat2rot_8m_abfe669dfcdb0c0cab03c9af0671b619b}{length}} of the upper arm \mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}} = 8
+\item 
+\mbox{\hyperlink{dquat2rot_8m_abfe669dfcdb0c0cab03c9af0671b619b}{length}} of the lower arm \mbox{\hyperlink{example__forward__kinematics_8m_a837b9d6d3fc2f7acb6e9fcd6b257aada}{c}} = 2
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} angle\mbox{[}deg\mbox{]} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} \mbox{\hyperlink{example__forward__kinematics_8m_a6b5f63b81ea7556089cab3c8b61c0fac}{axis\+\_\+\+UB}} = \mbox{[}0 0 1\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} \mbox{\hyperlink{example__forward__kinematics_8m_ab941875b351f11299fb9c8710f21af37}{Omega\+\_\+speed\+\_\+\+UB}} = 0
+\item 
+instantaneous rotational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}}\mbox{[}deg/\mbox{\hyperlink{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}{s}}\mbox{]} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} \mbox{\hyperlink{example__forward__kinematics_8m_a7cd76eb3555d29b2e8dd12c8665a5a84}{Omega\+\_\+axis\+\_\+\+UB}} = \mbox{[}0 0 -\/1\mbox{]}\textquotesingle{}
+\item 
+instantaneous rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{dquat2linevel_8m_aae262089a92cec6138cab3a6a9259007}{parameters}} for the lower arm \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_ad89586edf5825a10f3da8a27c2e122c4}{theta\+\_\+\+LU}} = 90
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} angle\mbox{[}deg\mbox{]} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_ac32054604ca85ef76fa7ea4b2d1204fd}{axis\+\_\+\+LU}} = \mbox{[}0 0 1\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_aed2ca75d6b96fa471a3d2429311a788e}{Omega\+\_\+speed\+\_\+\+LU}} = 20
+\item 
+instantaneous rotational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}}\mbox{[}deg/\mbox{\hyperlink{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}{s}}\mbox{]} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_ac998b05a6aaf46312c2bd17cd2c536ba}{Omega\+\_\+axis\+\_\+\+LU}} = \mbox{[}0 0 -\/1\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} angle\mbox{[}deg\mbox{]} of the hand around the wrist \mbox{\hyperlink{example__forward__kinematics_8m_a74ccb7c6c6ab0cca2a23475e02fba6b3}{axis\+\_\+\+HL}} = \mbox{[}0 0 1\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the hand around the wrist \mbox{\hyperlink{example__forward__kinematics_8m_a5f733a992131ad8cf6ee465d0b15909b}{Omega\+\_\+speed\+\_\+\+HL}} = 0
+\item 
+instantaneous rotational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}}\mbox{[}deg/\mbox{\hyperlink{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}{s}}\mbox{]} of the hand around the wrist \mbox{\hyperlink{example__forward__kinematics_8m_ab6696c1f17e28b825e06a31a8d7da384}{Omega\+\_\+axis\+\_\+\+HL}} = \mbox{[}0 0 -\/1\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} \mbox{\hyperlink{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}{R\+\_\+\+LU}} = \mbox{\hyperlink{example__forward__kinematics_8m_a5e93c672b13914b411f1d00ed60232f3}{rot2dquat}}(\mbox{\hyperlink{example__forward__kinematics_8m_ad89586edf5825a10f3da8a27c2e122c4}{theta\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_ac32054604ca85ef76fa7ea4b2d1204fd}{axis\+\_\+\+LU}})
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_ae09131aaca66c775020b0d7b753896b1}{T\+\_\+\+ES}} = trans2dquat(\mbox{[}1 0 0\mbox{]}\textquotesingle{},a)
+\item 
+rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} \mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}} = rotvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_aed2ca75d6b96fa471a3d2429311a788e}{Omega\+\_\+speed\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_ac998b05a6aaf46312c2bd17cd2c536ba}{Omega\+\_\+axis\+\_\+\+LU}})
+\item 
+rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} \mbox{\hyperlink{example__forward__kinematics_8m_a3aeb6dfb979d65d5a4d80f2a71d6740d}{P\+\_\+\+LE}} = \mbox{[}\mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}} 0 0\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} for \mbox{\hyperlink{example__forward__kinematics_8m_a3aeb6dfb979d65d5a4d80f2a71d6740d}{P\+\_\+\+LE}} \mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}{R\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_ae09131aaca66c775020b0d7b753896b1}{T\+\_\+\+ES}},R\+\_\+\+UB)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}}),P\+\_\+\+L\+E\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}})
+\item 
+Forward kinematics computation \mbox{\hyperlink{example__forward__kinematics_8m_a02e068bcdf1148feddea8123d4a51e23}{P\+\_\+\+BS}} = dquat2pos(\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a04e130fe98a4d1495918061695a86a4b}{antisym\+\_\+\+UB}} = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}},\mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}}))
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a4462663d4d137bde198a36ee1eb5b4fe}{vel\+\_\+\+P\+\_\+\+B\+S\+\_\+dq}} = \mbox{\hyperlink{example__forward__kinematics_8m_a04e130fe98a4d1495918061695a86a4b}{antisym\+\_\+\+UB}} + \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(R\+\_\+\+UB),\mbox{\hyperlink{example__forward__kinematics_8m_af97b9256723af4dff8c4d9a155ddc8df}{antisym\+\_\+\+LU}},R\+\_\+\+UB)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a30ef17c931b8e28f04400b1ab6a63519}{vel\+\_\+\+P\+\_\+\+BS}} = dquat2vel(\mbox{\hyperlink{example__forward__kinematics_8m_a4462663d4d137bde198a36ee1eb5b4fe}{vel\+\_\+\+P\+\_\+\+B\+S\+\_\+dq}})
+\item 
+Using \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motions \mbox{\hyperlink{trans2dquat_8m_ab87cb8b4837baa4d0ef5ca09e444e2ad}{elseif}} \mbox{\hyperlink{example__forward__kinematics_8m_a69ad3f457ebaeee65e1ea6104c36e445}{choice\+\_\+representation}}
+\item 
+\mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} \mbox{\hyperlink{dquat2screw_8m_ab845115acec14ed5e03d37aa89dc3b0f}{distance}} along the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} \mbox{\hyperlink{example__forward__kinematics_8m_ab5d14af6c389ef1b5049f1cd48d34145}{axispoint\+\_\+\+LU}} = \mbox{[}a 0 0\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_a42f883f12a3c31b790b0b61b046cd358}{obviously}}
+\item 
+\mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow there is no \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} component along the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} \mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}} = screwvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_aed2ca75d6b96fa471a3d2429311a788e}{Omega\+\_\+speed\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_ac998b05a6aaf46312c2bd17cd2c536ba}{Omega\+\_\+axis\+\_\+\+LU}},0,\mbox{[}0 0 0\mbox{]},S\+\_\+\+LU)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_aa30c5c2f1c981b44c17a7aa4d78fa3a6}{axispoint\+\_\+\+UB}} = \mbox{[}0 0 0\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}} = screw2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_acabdaf0c87511fda715130f39e7eca26}{theta\+\_\+\+UB}},d\+\_\+\+UB,\mbox{\hyperlink{example__forward__kinematics_8m_a6b5f63b81ea7556089cab3c8b61c0fac}{axis\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_aa30c5c2f1c981b44c17a7aa4d78fa3a6}{axispoint\+\_\+\+UB}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}} = screwvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_ab941875b351f11299fb9c8710f21af37}{Omega\+\_\+speed\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_a7cd76eb3555d29b2e8dd12c8665a5a84}{Omega\+\_\+axis\+\_\+\+UB}},0,\mbox{[}0 0 0\mbox{]},\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} \mbox{\hyperlink{example__forward__kinematics_8m_a74448f5cf3b062dd36818d0d82dde3a7}{P\+\_\+\+B\+S\+\_\+0}} = \mbox{[}a+\mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}} 0 0\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{example__forward__kinematics_8m_a80fbb535c4a4bfcb53e9bd5c8022775e}{P\+\_\+elbow\+\_\+dq}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,S\+\_\+\+LU)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_adbd8af50229eb16548727b0a93ef0ac2}{comp\+\_\+\+U\+B\+\_\+dot}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}}),\mbox{\hyperlink{example__forward__kinematics_8m_a80fbb535c4a4bfcb53e9bd5c8022775e}{P\+\_\+elbow\+\_\+dq}},\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}})+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}}),\mbox{\hyperlink{example__forward__kinematics_8m_a80fbb535c4a4bfcb53e9bd5c8022775e}{P\+\_\+elbow\+\_\+dq}},\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_afe478fedfb0b9e19601152e69ef58d50}{comp\+\_\+\+L\+U\+\_\+dot}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}}),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,S\+\_\+\+LU)+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}})
+\item 
+\mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}{R\+\_\+\+HL}} = \mbox{\hyperlink{example__forward__kinematics_8m_a5e93c672b13914b411f1d00ed60232f3}{rot2dquat}}(theta\+\_\+\+HL,\mbox{\hyperlink{example__forward__kinematics_8m_a74ccb7c6c6ab0cca2a23475e02fba6b3}{axis\+\_\+\+HL}})
+\item 
+\mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} specifying the \mbox{\hyperlink{screwvel2dquat_8m_a7a229a4786deeddd59c6091247a8c8a6}{offset}} between the elbow and the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} \mbox{\hyperlink{example__forward__kinematics_8m_a1b1628477f7188392dc81f97a9efb3e3}{T\+\_\+\+WE}} = trans2dquat(\mbox{[}1 0 0\mbox{]}\textquotesingle{},\mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}})
+\item 
+\mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} specifying the \mbox{\hyperlink{screwvel2dquat_8m_a7a229a4786deeddd59c6091247a8c8a6}{offset}} between the wrist and the elbow \mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}} = rotvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_ab941875b351f11299fb9c8710f21af37}{Omega\+\_\+speed\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_a7cd76eb3555d29b2e8dd12c8665a5a84}{Omega\+\_\+axis\+\_\+\+UB}})
+\item 
+rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}} = rotvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_a5f733a992131ad8cf6ee465d0b15909b}{Omega\+\_\+speed\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_ab6696c1f17e28b825e06a31a8d7da384}{Omega\+\_\+axis\+\_\+\+HL}})
+\item 
+rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the hand around the wrist \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} \mbox{\hyperlink{example__forward__kinematics_8m_a356e8fa06c69d1374df8d0c0be9118f4}{orientation\+\_\+tool\+\_\+H}} = \mbox{[}0 1 0\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ad8639c4ff4cd1990f8e1846ac90eed02}{L\+\_\+\+B\+S\+\_\+dq}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}},\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),L\+\_\+\+H\+W\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{example__forward__kinematics_8m_a3aedfead30800d117a9fe6b2aeb72501}{orientation\+\_\+tool\+\_\+\+H\+\_\+dot}} = \mbox{[}0 0 0\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a19b66ab20d19f00197aee60a4d0a960b}{P\+\_\+\+H\+W\+\_\+dot\+\_\+dq}} = \mbox{\hyperlink{example__forward__kinematics_8m_ab6b87eada5b8da07cb94b87cd0d23ab1}{vel2dquat}}(position\+\_\+tool\+\_\+\+H\+\_\+dot)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}{L\+\_\+\+LW}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}{R\+\_\+\+HL}}),L\+\_\+\+H\+W\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}{R\+\_\+\+HL}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_aa8e80c024033e5d95525b13e7107beba}{L\+\_\+\+UE}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(T\+\_\+\+W\+E\+\_\+\+R\+\_\+\+LU,\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),\mbox{\hyperlink{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}{L\+\_\+\+LW}},T\+\_\+\+W\+E\+\_\+\+R\+\_\+\+LU)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_af97b9256723af4dff8c4d9a155ddc8df}{antisym\+\_\+\+LU}} = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_aa8e80c024033e5d95525b13e7107beba}{L\+\_\+\+UE}},\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_aa8e80c024033e5d95525b13e7107beba}{L\+\_\+\+UE}}))
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a18ae347cf7569645cee5bff929cd706f}{antisym\+\_\+\+HL}} = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}{L\+\_\+\+LW}},\mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}{L\+\_\+\+LW}}))
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a7a080a977945f9df60bd57bdcffc1449}{R\+\_\+\+L\+U\+\_\+\+R\+\_\+\+UB}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}{R\+\_\+\+LU}},R\+\_\+\+UB)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a5000069e4c2c68378b780382c4a9f80a}{R\+\_\+tot}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}{R\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}{R\+\_\+\+LU}},R\+\_\+\+UB)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a469c4884df3534d02b6c8db4f1649812}{L\+\_\+\+B\+S\+\_\+dot}}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_af32752c0f9a79212597147b228004caa}{P\+\_\+\+UE}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(T\+\_\+\+W\+E\+\_\+\+R\+\_\+\+LU),P\+\_\+\+LW,T\+\_\+\+W\+E\+\_\+\+R\+\_\+\+LU)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a3b38ef476d15214d88225d377923c5c1}{antisym\+\_\+\+P\+\_\+\+UB}} = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}},\mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}}))
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a2f51f9e69b96e78b6619af2cd1cffd21}{antisym\+\_\+\+P\+\_\+\+LU}} = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_af32752c0f9a79212597147b228004caa}{P\+\_\+\+UE}},\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_af32752c0f9a79212597147b228004caa}{P\+\_\+\+UE}}))
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a6fbedb35d37d1df6b33a6b8d38af25db}{antisym\+\_\+\+P\+\_\+\+HL}} = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(P\+\_\+\+LW,\mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}},P\+\_\+\+LW))
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_af22780f13310a97741be11491fea80c4}{P\+\_\+\+B\+S\+\_\+dot\+\_\+dq}}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ac627011ead92a8a98225f74b955edb9d}{P\+\_\+\+B\+S\+\_\+dot}} = dquat2vel(\mbox{\hyperlink{example__forward__kinematics_8m_af22780f13310a97741be11491fea80c4}{P\+\_\+\+B\+S\+\_\+dot\+\_\+dq}})
+\item 
+\mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} \mbox{\hyperlink{dquat2screw_8m_ab845115acec14ed5e03d37aa89dc3b0f}{distance}} along the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} \mbox{\hyperlink{example__forward__kinematics_8m_afe735437234fb6b6edff56a63cae6a15}{axispoint\+\_\+\+HL}} = \mbox{[}a+\mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}} 0 0\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the hand around the wrist there is no \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} component along the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} \mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}} = screwvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_a5f733a992131ad8cf6ee465d0b15909b}{Omega\+\_\+speed\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_ab6696c1f17e28b825e06a31a8d7da384}{Omega\+\_\+axis\+\_\+\+HL}},0,\mbox{[}0 0 0\mbox{]},\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} \mbox{\hyperlink{example__forward__kinematics_8m_a13968af941a9ca94a6c7e813d6d82c0c}{orientation\+\_\+tool\+\_\+0}} = \mbox{[}0 1 0\mbox{]}\textquotesingle{}
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}{L\+\_\+\+B\+S\+\_\+0}} = \mbox{\hyperlink{example__forward__kinematics_8m_a8544b09e26c73c19478dedcb49eb5764}{line2dquat}}(\mbox{\hyperlink{example__forward__kinematics_8m_a13968af941a9ca94a6c7e813d6d82c0c}{orientation\+\_\+tool\+\_\+0}},position\+\_\+tool\+\_\+0)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a0a2faa4d61d00187456a066ea5374477}{L\+\_\+\+BS}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}},\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),\mbox{\hyperlink{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}{L\+\_\+\+B\+S\+\_\+0}},\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{example__forward__kinematics_8m_a7b29c864eb2598b90f089e4160021970}{orientation\+\_\+tool\+\_\+0\+\_\+dot}} = \mbox{[}0 0 0\mbox{]}\textquotesingle{}
+\item 
+the reference \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}} rate of \mbox{\hyperlink{example__forward__kinematics_8m_a1ff199e1b839f8424489df725dc8ce1d}{change}} \mbox{\hyperlink{example__forward__kinematics_8m_a4c9cfde92734e47cddc6bf02b19fd2ef}{position\+\_\+tool\+\_\+0\+\_\+dot}} = \mbox{[}0 0 0\mbox{]}\textquotesingle{}
+\item 
+the reference \mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{example__forward__kinematics_8m_a16c9f7dc2334c974e6a9ea8b7ea9fdc5}{L\+\_\+\+B\+S\+\_\+0\+\_\+dot}} = linevel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_a13968af941a9ca94a6c7e813d6d82c0c}{orientation\+\_\+tool\+\_\+0}},position\+\_\+tool\+\_\+0,\mbox{\hyperlink{example__forward__kinematics_8m_a7b29c864eb2598b90f089e4160021970}{orientation\+\_\+tool\+\_\+0\+\_\+dot}},\mbox{\hyperlink{example__forward__kinematics_8m_a4c9cfde92734e47cddc6bf02b19fd2ef}{position\+\_\+tool\+\_\+0\+\_\+dot}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a5c52580e7c2b1bcad3f5f39725ba8f48}{L\+\_\+e}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU,\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),L\+\_\+w,S\+\_\+\+LU)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a66f7153fa1cc240ec456d750fdc4e1c9}{comp\+\_\+\+H\+L\+\_\+dot}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}},\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),\mbox{\hyperlink{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}{L\+\_\+\+B\+S\+\_\+0}},\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}})+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}},\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),\mbox{\hyperlink{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}{L\+\_\+\+B\+S\+\_\+0}},\mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a1ad36f4cf94dbed3bbd5fe65bfb97caf}{S\+\_\+\+L\+U\+\_\+\+S\+\_\+\+UB}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(S\+\_\+\+LU,\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}{P\+\_\+w}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}}),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a5a6f7a3ad94211e1edbefb56f071f65d}{P\+\_\+e}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU),\mbox{\hyperlink{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}{P\+\_\+w}},S\+\_\+\+LU)
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a5abec04dfe34635c3c62a3505d094c7d}{comp\+\_\+\+P\+\_\+\+H\+L\+\_\+dot}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}}),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}})+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}}),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_ae46d18bb80375b9981c859f2ad82997c}{comp\+\_\+\+P\+\_\+\+L\+U\+\_\+dot}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}}),\mbox{\hyperlink{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}{P\+\_\+w}},S\+\_\+\+LU)+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU),\mbox{\hyperlink{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}{P\+\_\+w}},\mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}})
+\item 
+\mbox{\hyperlink{example__forward__kinematics_8m_a3ec94f27f792699c7fe17bcea34dfac9}{comp\+\_\+\+P\+\_\+\+U\+B\+\_\+dot}} = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}}),\mbox{\hyperlink{example__forward__kinematics_8m_a5a6f7a3ad94211e1edbefb56f071f65d}{P\+\_\+e}},\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}})+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}}),\mbox{\hyperlink{example__forward__kinematics_8m_a5a6f7a3ad94211e1edbefb56f071f65d}{P\+\_\+e}},\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{example__forward__kinematics_8m_a1ff199e1b839f8424489df725dc8ce1d}\label{example__forward__kinematics_8m_a1ff199e1b839f8424489df725dc8ce1d}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!change@{change}}
+\index{change@{change}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{change()}{change()}}
+{\footnotesize\ttfamily the \mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}} rate of change (\begin{DoxyParamCaption}\item[{in hand-\/fixed}]{coordinates }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a2e6a0d03034e28e125ebee0b1d762440}\label{example__forward__kinematics_8m_a2e6a0d03034e28e125ebee0b1d762440}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The three-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}} rate of \mbox{\hyperlink{example__forward__kinematics_8m_a1ff199e1b839f8424489df725dc8ce1d}{change}}(in body-\/fixed \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a45cac65ff268565f4a77a592a5b7de36}\label{example__forward__kinematics_8m_a45cac65ff268565f4a77a592a5b7de36}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The three-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}}(in body-\/fixed \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a4090d69aafc79f00df75cff9b1acd8c0}\label{example__forward__kinematics_8m_a4090d69aafc79f00df75cff9b1acd8c0}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The three-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}}(in body-\/fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_aaf1b598537d2a1b1b0c6866402863433}\label{example__forward__kinematics_8m_aaf1b598537d2a1b1b0c6866402863433}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The three-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}}(in body-\/fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_aa13e5d30451c147c3f9dda52f72560cb}\label{example__forward__kinematics_8m_aa13e5d30451c147c3f9dda52f72560cb}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The two-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}}(in body-\/fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ae7407794fd5465116e48a16367a58723}\label{example__forward__kinematics_8m_ae7407794fd5465116e48a16367a58723}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\textquotesingle{}The two-\/link arm \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/effector \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}}(in body-\/fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}}) is \+:\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a7aa4afd77b0a29dea12b7ea3d289b3ba}\label{example__forward__kinematics_8m_a7aa4afd77b0a29dea12b7ea3d289b3ba}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{orientation\+\_\+tool\+\_\+B}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a00e5c24c2b2f251ac56911e1f759d1b1}\label{example__forward__kinematics_8m_a00e5c24c2b2f251ac56911e1f759d1b1}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{orientation\+\_\+tool\+\_\+\+B\+\_\+dot}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a20bb2a7b8a74fd0b17793f86b1a61d73}\label{example__forward__kinematics_8m_a20bb2a7b8a74fd0b17793f86b1a61d73}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{example__forward__kinematics_8m_a02e068bcdf1148feddea8123d4a51e23}{P\+\_\+\+BS}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a692578d7e13689bdb01209c9e4191f5b}\label{example__forward__kinematics_8m_a692578d7e13689bdb01209c9e4191f5b}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{example__forward__kinematics_8m_ac627011ead92a8a98225f74b955edb9d}{P\+\_\+\+B\+S\+\_\+dot}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a6a78068b675ce87c5d65921f9a9bc446}\label{example__forward__kinematics_8m_a6a78068b675ce87c5d65921f9a9bc446}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!disp@{disp}}
+\index{disp@{disp}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{disp()}{disp()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
+{\footnotesize\ttfamily disp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{example__forward__kinematics_8m_a30ef17c931b8e28f04400b1ab6a63519}{vel\+\_\+\+P\+\_\+\+BS}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}\label{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!DQmult@{DQmult}}
+\index{DQmult@{DQmult}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{DQmult()}{DQmult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_a1b1628477f7188392dc81f97a9efb3e3}{T\+\_\+\+WE}} \mbox{\hyperlink{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}{R\+\_\+\+LU}} D\+Qmult (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a8544b09e26c73c19478dedcb49eb5764}\label{example__forward__kinematics_8m_a8544b09e26c73c19478dedcb49eb5764}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!line2dquat@{line2dquat}}
+\index{line2dquat@{line2dquat}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{line2dquat()}{line2dquat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_a356e8fa06c69d1374df8d0c0be9118f4}{orientation\+\_\+tool\+\_\+H}},position\+\_\+tool\+\_\+\+HW line2dquat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a6a7efe8254b0758de7097fc75499cfdf}\label{example__forward__kinematics_8m_a6a7efe8254b0758de7097fc75499cfdf}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!origin@{origin}}
+\index{origin@{origin}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{origin()}{origin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_a7a229a4786deeddd59c6091247a8c8a6}{offset}} between the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} \mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}} and the origin (\begin{DoxyParamCaption}\item[{in the reference}]{configuration }\end{DoxyParamCaption}) = screw2dquat(theta\+\_\+\+HL,d\+\_\+\+HL,\mbox{\hyperlink{example__forward__kinematics_8m_a74ccb7c6c6ab0cca2a23475e02fba6b3}{axis\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_afe735437234fb6b6edff56a63cae6a15}{axispoint\+\_\+\+HL}})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a792c65fe57aaf54ee218fe8149df7eab}\label{example__forward__kinematics_8m_a792c65fe57aaf54ee218fe8149df7eab}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!pos2dquat@{pos2dquat}}
+\index{pos2dquat@{pos2dquat}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{pos2dquat()}{pos2dquat()}}
+{\footnotesize\ttfamily position\+\_\+tool\+\_\+\+HW pos2dquat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}\label{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!position@{position}}
+\index{position@{position}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily reference position (\begin{DoxyParamCaption}\item[{arm}]{extended }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}\label{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!quaternion@{quaternion}}
+\index{quaternion@{quaternion}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{quaternion()}{quaternion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual quaternion (\begin{DoxyParamCaption}\item[{due to the rotational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}}}]{only }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a5e93c672b13914b411f1d00ed60232f3}\label{example__forward__kinematics_8m_a5e93c672b13914b411f1d00ed60232f3}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!rot2dquat@{rot2dquat}}
+\index{rot2dquat@{rot2dquat}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{rot2dquat()}{rot2dquat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_acabdaf0c87511fda715130f39e7eca26}{theta\+\_\+\+UB}} \mbox{\hyperlink{example__forward__kinematics_8m_a6b5f63b81ea7556089cab3c8b61c0fac}{axis\+\_\+\+UB}} rot2dquat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}\label{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!S\_HL@{S\_HL}}
+\index{S\_HL@{S\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{S\_HL()}{S\_HL()}}
+{\footnotesize\ttfamily D\+Qconj(S\+\_\+\+HL,\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{} S\+\_\+\+HL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}\label{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!shoulder@{shoulder}}
+\index{shoulder@{shoulder}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{shoulder()}{shoulder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} specifying the \mbox{\hyperlink{screwvel2dquat_8m_a7a229a4786deeddd59c6091247a8c8a6}{offset}} between the elbow and the shoulder (\begin{DoxyParamCaption}\item[{in upper-\/arm fixed shoulder centered \%}]{coordinates }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_acabdaf0c87511fda715130f39e7eca26}\label{example__forward__kinematics_8m_acabdaf0c87511fda715130f39e7eca26}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!theta\_UB@{theta\_UB}}
+\index{theta\_UB@{theta\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{theta\_UB()}{theta\_UB()}}
+{\footnotesize\ttfamily e.\+g. a fingertip, or a \mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} theta\+\_\+\+UB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}\label{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!tool@{tool}}
+\index{tool@{tool}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{tool()}{tool()}}
+{\footnotesize\ttfamily tool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}}-\/}]{effector }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ab6b87eada5b8da07cb94b87cd0d23ab1}\label{example__forward__kinematics_8m_ab6b87eada5b8da07cb94b87cd0d23ab1}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!vel2dquat@{vel2dquat}}
+\index{vel2dquat@{vel2dquat}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{vel2dquat()}{vel2dquat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_a4c9cfde92734e47cddc6bf02b19fd2ef}{position\+\_\+tool\+\_\+0\+\_\+dot}} vel2dquat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}\label{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!velocity@{velocity}}
+\index{velocity@{velocity}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{velocity()}{velocity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily the \mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} velocity (\begin{DoxyParamCaption}\item[{in hand-\/fixed}]{coordinates }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a58bf564415f69584b47ca165c071a29f}\label{example__forward__kinematics_8m_a58bf564415f69584b47ca165c071a29f}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!velocity@{velocity}}
+\index{velocity@{velocity}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{velocity()}{velocity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily velocity (\begin{DoxyParamCaption}\item[{see equation(18) in the}]{article }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{example__forward__kinematics_8m_a00a349297fa58bc80ff5329e25dcfe28}\label{example__forward__kinematics_8m_a00a349297fa58bc80ff5329e25dcfe28}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!all@{all}}
+\index{all@{all}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{all}{all}}
+{\footnotesize\ttfamily close all}
+
+
+
+Definition at line 23 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a18ae347cf7569645cee5bff929cd706f}\label{example__forward__kinematics_8m_a18ae347cf7569645cee5bff929cd706f}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!antisym\_HL@{antisym\_HL}}
+\index{antisym\_HL@{antisym\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{antisym\_HL}{antisym\_HL}}
+{\footnotesize\ttfamily antisym\+\_\+\+HL = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}{L\+\_\+\+LW}},\mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}{L\+\_\+\+LW}}))}
+
+
+
+Definition at line 151 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_af97b9256723af4dff8c4d9a155ddc8df}\label{example__forward__kinematics_8m_af97b9256723af4dff8c4d9a155ddc8df}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!antisym\_LU@{antisym\_LU}}
+\index{antisym\_LU@{antisym\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{antisym\_LU}{antisym\_LU}}
+{\footnotesize\ttfamily antisym\+\_\+\+LU = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_aa8e80c024033e5d95525b13e7107beba}{L\+\_\+\+UE}},\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_aa8e80c024033e5d95525b13e7107beba}{L\+\_\+\+UE}}))}
+
+
+
+Definition at line 150 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a6fbedb35d37d1df6b33a6b8d38af25db}\label{example__forward__kinematics_8m_a6fbedb35d37d1df6b33a6b8d38af25db}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!antisym\_P\_HL@{antisym\_P\_HL}}
+\index{antisym\_P\_HL@{antisym\_P\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{antisym\_P\_HL}{antisym\_P\_HL}}
+{\footnotesize\ttfamily antisym\+\_\+\+P\+\_\+\+HL = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(P\+\_\+\+LW,\mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}{Omega\+\_\+\+HL}},P\+\_\+\+LW))}
+
+
+
+Definition at line 165 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a2f51f9e69b96e78b6619af2cd1cffd21}\label{example__forward__kinematics_8m_a2f51f9e69b96e78b6619af2cd1cffd21}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!antisym\_P\_LU@{antisym\_P\_LU}}
+\index{antisym\_P\_LU@{antisym\_P\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{antisym\_P\_LU}{antisym\_P\_LU}}
+{\footnotesize\ttfamily antisym\+\_\+\+P\+\_\+\+LU = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_af32752c0f9a79212597147b228004caa}{P\+\_\+\+UE}},\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}{Omega\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_af32752c0f9a79212597147b228004caa}{P\+\_\+\+UE}}))}
+
+
+
+Definition at line 164 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a3b38ef476d15214d88225d377923c5c1}\label{example__forward__kinematics_8m_a3b38ef476d15214d88225d377923c5c1}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!antisym\_P\_UB@{antisym\_P\_UB}}
+\index{antisym\_P\_UB@{antisym\_P\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{antisym\_P\_UB}{antisym\_P\_UB}}
+{\footnotesize\ttfamily antisym\+\_\+\+P\+\_\+\+UB = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}},\mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}}))}
+
+
+
+Definition at line 163 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a04e130fe98a4d1495918061695a86a4b}\label{example__forward__kinematics_8m_a04e130fe98a4d1495918061695a86a4b}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!antisym\_UB@{antisym\_UB}}
+\index{antisym\_UB@{antisym\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{antisym\_UB}{antisym\_UB}}
+{\footnotesize\ttfamily antisym\+\_\+\+UB = 0.\+5$\ast$(\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}},\mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}})-\/\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}{Omega\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}}))}
+
+
+
+Definition at line 76 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a74ccb7c6c6ab0cca2a23475e02fba6b3}\label{example__forward__kinematics_8m_a74ccb7c6c6ab0cca2a23475e02fba6b3}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!axis\_HL@{axis\_HL}}
+\index{axis\_HL@{axis\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{axis\_HL}{axis\_HL}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} angle \mbox{[}deg\mbox{]} of the hand around the wrist axis\+\_\+\+HL = \mbox{[}0 0 1\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 48 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ac32054604ca85ef76fa7ea4b2d1204fd}\label{example__forward__kinematics_8m_ac32054604ca85ef76fa7ea4b2d1204fd}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!axis\_LU@{axis\_LU}}
+\index{axis\_LU@{axis\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{axis\_LU}{axis\_LU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} angle \mbox{[}deg\mbox{]} of the lower arm around the elbow axis\+\_\+\+LU = \mbox{[}0 0 1\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 41 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a6b5f63b81ea7556089cab3c8b61c0fac}\label{example__forward__kinematics_8m_a6b5f63b81ea7556089cab3c8b61c0fac}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!axis\_UB@{axis\_UB}}
+\index{axis\_UB@{axis\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{axis\_UB}{axis\_UB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} angle \mbox{[}deg\mbox{]} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} axis\+\_\+\+UB = \mbox{[}0 0 1\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 35 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_afe735437234fb6b6edff56a63cae6a15}\label{example__forward__kinematics_8m_afe735437234fb6b6edff56a63cae6a15}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!axispoint\_HL@{axispoint\_HL}}
+\index{axispoint\_HL@{axispoint\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{axispoint\_HL}{axispoint\_HL}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} \mbox{\hyperlink{dquat2screw_8m_ab845115acec14ed5e03d37aa89dc3b0f}{distance}} along the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} axispoint\+\_\+\+HL = \mbox{[}a+\mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}} 0 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 175 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ab5d14af6c389ef1b5049f1cd48d34145}\label{example__forward__kinematics_8m_ab5d14af6c389ef1b5049f1cd48d34145}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!axispoint\_LU@{axispoint\_LU}}
+\index{axispoint\_LU@{axispoint\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{axispoint\_LU}{axispoint\_LU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} \mbox{\hyperlink{dquat2screw_8m_ab845115acec14ed5e03d37aa89dc3b0f}{distance}} along the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} axispoint\+\_\+\+LU = \mbox{[}a 0 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 83 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_aa30c5c2f1c981b44c17a7aa4d78fa3a6}\label{example__forward__kinematics_8m_aa30c5c2f1c981b44c17a7aa4d78fa3a6}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!axispoint\_UB@{axispoint\_UB}}
+\index{axispoint\_UB@{axispoint\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{axispoint\_UB}{axispoint\_UB}}
+{\footnotesize\ttfamily axispoint\+\_\+\+UB = \mbox{[}0 0 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 90 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}\label{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!b@{b}}
+\index{b@{b}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \mbox{\hyperlink{dquat2rot_8m_abfe669dfcdb0c0cab03c9af0671b619b}{length}} of the upper arm b = 8}
+
+
+
+Definition at line 30 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a837b9d6d3fc2f7acb6e9fcd6b257aada}\label{example__forward__kinematics_8m_a837b9d6d3fc2f7acb6e9fcd6b257aada}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!c@{c}}
+\index{c@{c}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily in body fixed \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} centered \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} c = 2}
+
+
+
+Definition at line 31 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a129c302ea4ce7b84edcdd7ae756e6329}\label{example__forward__kinematics_8m_a129c302ea4ce7b84edcdd7ae756e6329}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!choice\_arm@{choice\_arm}}
+\index{choice\_arm@{choice\_arm}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{choice\_arm}{choice\_arm}}
+{\footnotesize\ttfamily instantaneous rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the lower arm around the elbow arm if choice\+\_\+arm = 3}
+
+
+
+Definition at line 26 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a69ad3f457ebaeee65e1ea6104c36e445}\label{example__forward__kinematics_8m_a69ad3f457ebaeee65e1ea6104c36e445}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!choice\_representation@{choice\_representation}}
+\index{choice\_representation@{choice\_representation}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{choice\_representation}{choice\_representation}}
+{\footnotesize\ttfamily Using \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motions \mbox{\hyperlink{trans2dquat_8m_ab87cb8b4837baa4d0ef5ca09e444e2ad}{elseif}} choice\+\_\+representation}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{== 2\% \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion representation: the used reference frame is \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}}-\/centered body-\/fixed}
+\DoxyCodeLine{        \% \mbox{\hyperlink{dquat2line_8m_aae262089a92cec6138cab3a6a9259007}{parameters}} of the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion of the lower arm around the elbow}
+\DoxyCodeLine{        d\_LU = 0}
+
+\end{DoxyCode}
+
+
+Definition at line 80 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a3f3d3b13a15c726d6aa03db3dd0d6377}\label{example__forward__kinematics_8m_a3f3d3b13a15c726d6aa03db3dd0d6377}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!clc@{clc}}
+\index{clc@{clc}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{clc}{clc}}
+{\footnotesize\ttfamily clc}
+
+
+
+Definition at line 24 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a66f7153fa1cc240ec456d750fdc4e1c9}\label{example__forward__kinematics_8m_a66f7153fa1cc240ec456d750fdc4e1c9}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!comp\_HL\_dot@{comp\_HL\_dot}}
+\index{comp\_HL\_dot@{comp\_HL\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{comp\_HL\_dot}{comp\_HL\_dot}}
+{\footnotesize\ttfamily comp\+\_\+\+H\+L\+\_\+dot = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}},\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),\mbox{\hyperlink{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}{L\+\_\+\+B\+S\+\_\+0}},\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}})+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}},\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),\mbox{\hyperlink{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}{L\+\_\+\+B\+S\+\_\+0}},\mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}})}
+
+
+
+Definition at line 212 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_afe478fedfb0b9e19601152e69ef58d50}\label{example__forward__kinematics_8m_afe478fedfb0b9e19601152e69ef58d50}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!comp\_LU\_dot@{comp\_LU\_dot}}
+\index{comp\_LU\_dot@{comp\_LU\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{comp\_LU\_dot}{comp\_LU\_dot}}
+{\footnotesize\ttfamily comp\+\_\+\+L\+U\+\_\+dot = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}}),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,S\+\_\+\+LU)+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}})}
+
+
+
+Definition at line 104 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a5abec04dfe34635c3c62a3505d094c7d}\label{example__forward__kinematics_8m_a5abec04dfe34635c3c62a3505d094c7d}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!comp\_P\_HL\_dot@{comp\_P\_HL\_dot}}
+\index{comp\_P\_HL\_dot@{comp\_P\_HL\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{comp\_P\_HL\_dot}{comp\_P\_HL\_dot}}
+{\footnotesize\ttfamily comp\+\_\+\+P\+\_\+\+H\+L\+\_\+dot = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}}),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}})+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}}),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}{S\+\_\+\+H\+L\+\_\+dot}})}
+
+
+
+Definition at line 226 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ae46d18bb80375b9981c859f2ad82997c}\label{example__forward__kinematics_8m_ae46d18bb80375b9981c859f2ad82997c}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!comp\_P\_LU\_dot@{comp\_P\_LU\_dot}}
+\index{comp\_P\_LU\_dot@{comp\_P\_LU\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{comp\_P\_LU\_dot}{comp\_P\_LU\_dot}}
+{\footnotesize\ttfamily comp\+\_\+\+P\+\_\+\+L\+U\+\_\+dot = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}}),\mbox{\hyperlink{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}{P\+\_\+w}},S\+\_\+\+LU)+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU),\mbox{\hyperlink{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}{P\+\_\+w}},\mbox{\hyperlink{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}{S\+\_\+\+L\+U\+\_\+dot}})}
+
+
+
+Definition at line 227 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a3ec94f27f792699c7fe17bcea34dfac9}\label{example__forward__kinematics_8m_a3ec94f27f792699c7fe17bcea34dfac9}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!comp\_P\_UB\_dot@{comp\_P\_UB\_dot}}
+\index{comp\_P\_UB\_dot@{comp\_P\_UB\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{comp\_P\_UB\_dot}{comp\_P\_UB\_dot}}
+{\footnotesize\ttfamily comp\+\_\+\+P\+\_\+\+U\+B\+\_\+dot = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}}),\mbox{\hyperlink{example__forward__kinematics_8m_a5a6f7a3ad94211e1edbefb56f071f65d}{P\+\_\+e}},\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}})+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}}),\mbox{\hyperlink{example__forward__kinematics_8m_a5a6f7a3ad94211e1edbefb56f071f65d}{P\+\_\+e}},\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}})}
+
+
+
+Definition at line 228 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_adbd8af50229eb16548727b0a93ef0ac2}\label{example__forward__kinematics_8m_adbd8af50229eb16548727b0a93ef0ac2}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!comp\_UB\_dot@{comp\_UB\_dot}}
+\index{comp\_UB\_dot@{comp\_UB\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{comp\_UB\_dot}{comp\_UB\_dot}}
+{\footnotesize\ttfamily comp\+\_\+\+U\+B\+\_\+dot = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}}),\mbox{\hyperlink{example__forward__kinematics_8m_a80fbb535c4a4bfcb53e9bd5c8022775e}{P\+\_\+elbow\+\_\+dq}},\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}})+\mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}}),\mbox{\hyperlink{example__forward__kinematics_8m_a80fbb535c4a4bfcb53e9bd5c8022775e}{P\+\_\+elbow\+\_\+dq}},\mbox{\hyperlink{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}{S\+\_\+\+U\+B\+\_\+dot}})}
+
+
+
+Definition at line 103 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a0a2faa4d61d00187456a066ea5374477}\label{example__forward__kinematics_8m_a0a2faa4d61d00187456a066ea5374477}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!L\_BS@{L\_BS}}
+\index{L\_BS@{L\_BS}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{L\_BS}{L\_BS}}
+{\footnotesize\ttfamily L\+\_\+\+BS = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}},\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),\mbox{\hyperlink{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}{L\+\_\+\+B\+S\+\_\+0}},\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}})}
+
+
+
+Definition at line 199 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}\label{example__forward__kinematics_8m_aa3a7e308eb080806c7892713c820e991}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!L\_BS\_0@{L\_BS\_0}}
+\index{L\_BS\_0@{L\_BS\_0}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{L\_BS\_0}{L\_BS\_0}}
+{\footnotesize\ttfamily L\+\_\+\+B\+S\+\_\+0 = \mbox{\hyperlink{example__forward__kinematics_8m_a8544b09e26c73c19478dedcb49eb5764}{line2dquat}}(\mbox{\hyperlink{example__forward__kinematics_8m_a13968af941a9ca94a6c7e813d6d82c0c}{orientation\+\_\+tool\+\_\+0}},position\+\_\+tool\+\_\+0)}
+
+
+
+Definition at line 197 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a16c9f7dc2334c974e6a9ea8b7ea9fdc5}\label{example__forward__kinematics_8m_a16c9f7dc2334c974e6a9ea8b7ea9fdc5}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!L\_BS\_0\_dot@{L\_BS\_0\_dot}}
+\index{L\_BS\_0\_dot@{L\_BS\_0\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{L\_BS\_0\_dot}{L\_BS\_0\_dot}}
+{\footnotesize\ttfamily the reference \mbox{\hyperlink{example__forward__kinematics_8m_aa382eaa8ceabd4c9e206647e62e283c7}{tool}} \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} L\+\_\+\+B\+S\+\_\+0\+\_\+dot = linevel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_a13968af941a9ca94a6c7e813d6d82c0c}{orientation\+\_\+tool\+\_\+0}},position\+\_\+tool\+\_\+0,\mbox{\hyperlink{example__forward__kinematics_8m_a7b29c864eb2598b90f089e4160021970}{orientation\+\_\+tool\+\_\+0\+\_\+dot}},\mbox{\hyperlink{example__forward__kinematics_8m_a4c9cfde92734e47cddc6bf02b19fd2ef}{position\+\_\+tool\+\_\+0\+\_\+dot}})}
+
+
+
+Definition at line 207 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a469c4884df3534d02b6c8db4f1649812}\label{example__forward__kinematics_8m_a469c4884df3534d02b6c8db4f1649812}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!L\_BS\_dot@{L\_BS\_dot}}
+\index{L\_BS\_dot@{L\_BS\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{L\_BS\_dot}{L\_BS\_dot}}
+{\footnotesize\ttfamily L\+\_\+\+B\+S\+\_\+dot}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{example__forward__kinematics_8m_a04e130fe98a4d1495918061695a86a4b}{antisym\_UB}}+...}
+\DoxyCodeLine{                   \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{DQmult}}(DQconj(R\_UB),\mbox{\hyperlink{example__forward__kinematics_8m_af97b9256723af4dff8c4d9a155ddc8df}{antisym\_LU}},R\_UB)+...}
+\DoxyCodeLine{                   \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{DQmult}}(DQconj(\mbox{\hyperlink{example__forward__kinematics_8m_a7a080a977945f9df60bd57bdcffc1449}{R\_LU\_R\_UB}}),\mbox{\hyperlink{example__forward__kinematics_8m_a18ae347cf7569645cee5bff929cd706f}{antisym\_HL}},\mbox{\hyperlink{example__forward__kinematics_8m_a7a080a977945f9df60bd57bdcffc1449}{R\_LU\_R\_UB}})+...}
+\DoxyCodeLine{                   \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{DQmult}}(DQconj(\mbox{\hyperlink{example__forward__kinematics_8m_a5000069e4c2c68378b780382c4a9f80a}{R\_tot}}),L\_HW\_dot,\mbox{\hyperlink{example__forward__kinematics_8m_a5000069e4c2c68378b780382c4a9f80a}{R\_tot}})}
+
+\end{DoxyCode}
+
+
+Definition at line 154 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ad8639c4ff4cd1990f8e1846ac90eed02}\label{example__forward__kinematics_8m_ad8639c4ff4cd1990f8e1846ac90eed02}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!L\_BS\_dq@{L\_BS\_dq}}
+\index{L\_BS\_dq@{L\_BS\_dq}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{L\_BS\_dq}{L\_BS\_dq}}
+{\footnotesize\ttfamily L\+\_\+\+B\+S\+\_\+dq = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}},\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),L\+\_\+\+H\+W\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}})}
+
+
+
+Definition at line 134 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a5c52580e7c2b1bcad3f5f39725ba8f48}\label{example__forward__kinematics_8m_a5c52580e7c2b1bcad3f5f39725ba8f48}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!L\_e@{L\_e}}
+\index{L\_e@{L\_e}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{L\_e}{L\_e}}
+{\footnotesize\ttfamily L\+\_\+e = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU,\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),L\+\_\+w,S\+\_\+\+LU)}
+
+
+
+Definition at line 211 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}\label{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!L\_LW@{L\_LW}}
+\index{L\_LW@{L\_LW}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{L\_LW}{L\_LW}}
+{\footnotesize\ttfamily L\+\_\+\+LW = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}{R\+\_\+\+HL}}),L\+\_\+\+H\+W\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}{R\+\_\+\+HL}})}
+
+
+
+Definition at line 147 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_aa8e80c024033e5d95525b13e7107beba}\label{example__forward__kinematics_8m_aa8e80c024033e5d95525b13e7107beba}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!L\_UE@{L\_UE}}
+\index{L\_UE@{L\_UE}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{L\_UE}{L\_UE}}
+{\footnotesize\ttfamily L\+\_\+\+UE = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(T\+\_\+\+W\+E\+\_\+\+R\+\_\+\+LU,\textquotesingle{}\mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}}\textquotesingle{}),\mbox{\hyperlink{example__forward__kinematics_8m_ae060af0a77efd59918259858a7c26dd1}{L\+\_\+\+LW}},T\+\_\+\+W\+E\+\_\+\+R\+\_\+\+LU)}
+
+
+
+Definition at line 148 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a42f883f12a3c31b790b0b61b046cd358}\label{example__forward__kinematics_8m_a42f883f12a3c31b790b0b61b046cd358}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!obviously@{obviously}}
+\index{obviously@{obviously}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{obviously}{obviously}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow obviously}
+
+
+
+Definition at line 85 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ab6696c1f17e28b825e06a31a8d7da384}\label{example__forward__kinematics_8m_ab6696c1f17e28b825e06a31a8d7da384}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_axis\_HL@{Omega\_axis\_HL}}
+\index{Omega\_axis\_HL@{Omega\_axis\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_axis\_HL}{Omega\_axis\_HL}}
+{\footnotesize\ttfamily instantaneous rotational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}} \mbox{[}deg/\mbox{\hyperlink{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}{s}}\mbox{]} of the hand around the wrist Omega\+\_\+axis\+\_\+\+HL = \mbox{[}0 0 -\/1\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 50 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ac998b05a6aaf46312c2bd17cd2c536ba}\label{example__forward__kinematics_8m_ac998b05a6aaf46312c2bd17cd2c536ba}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_axis\_LU@{Omega\_axis\_LU}}
+\index{Omega\_axis\_LU@{Omega\_axis\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_axis\_LU}{Omega\_axis\_LU}}
+{\footnotesize\ttfamily instantaneous rotational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}} \mbox{[}deg/\mbox{\hyperlink{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}{s}}\mbox{]} of the lower arm around the elbow Omega\+\_\+axis\+\_\+\+LU = \mbox{[}0 0 -\/1\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 43 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a7cd76eb3555d29b2e8dd12c8665a5a84}\label{example__forward__kinematics_8m_a7cd76eb3555d29b2e8dd12c8665a5a84}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_axis\_UB@{Omega\_axis\_UB}}
+\index{Omega\_axis\_UB@{Omega\_axis\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_axis\_UB}{Omega\_axis\_UB}}
+{\footnotesize\ttfamily instantaneous rotational \mbox{\hyperlink{transvel2dquat_8m_abd24a6353ffa1cbcc3c360c640dd44d8}{speed}} \mbox{[}deg/\mbox{\hyperlink{_qmult_8m_a03e2d492fb0577ed7e1bb238aabb5439}{s}}\mbox{]} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} Omega\+\_\+axis\+\_\+\+UB = \mbox{[}0 0 -\/1\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 37 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}\label{example__forward__kinematics_8m_a1770d885724c938f239d1e17162c9066}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_HL@{Omega\_HL}}
+\index{Omega\_HL@{Omega\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_HL}{Omega\_HL}}
+{\footnotesize\ttfamily rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow Omega\+\_\+\+HL = rotvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_a5f733a992131ad8cf6ee465d0b15909b}{Omega\+\_\+speed\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_ab6696c1f17e28b825e06a31a8d7da384}{Omega\+\_\+axis\+\_\+\+HL}})}
+
+
+
+Definition at line 126 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}\label{example__forward__kinematics_8m_ab95896be20dffdfc76897bce9ffaae01}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_LU@{Omega\_LU}}
+\index{Omega\_LU@{Omega\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_LU}{Omega\_LU}}
+{\footnotesize\ttfamily rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} Omega\+\_\+\+LU = rotvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_aed2ca75d6b96fa471a3d2429311a788e}{Omega\+\_\+speed\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_ac998b05a6aaf46312c2bd17cd2c536ba}{Omega\+\_\+axis\+\_\+\+LU}})}
+
+
+
+Definition at line 64 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a5f733a992131ad8cf6ee465d0b15909b}\label{example__forward__kinematics_8m_a5f733a992131ad8cf6ee465d0b15909b}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_speed\_HL@{Omega\_speed\_HL}}
+\index{Omega\_speed\_HL@{Omega\_speed\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_speed\_HL}{Omega\_speed\_HL}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the hand around the wrist Omega\+\_\+speed\+\_\+\+HL = 0}
+
+
+
+Definition at line 49 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_aed2ca75d6b96fa471a3d2429311a788e}\label{example__forward__kinematics_8m_aed2ca75d6b96fa471a3d2429311a788e}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_speed\_LU@{Omega\_speed\_LU}}
+\index{Omega\_speed\_LU@{Omega\_speed\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_speed\_LU}{Omega\_speed\_LU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the lower arm around the elbow Omega\+\_\+speed\+\_\+\+LU = 20}
+
+
+
+Definition at line 42 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ab941875b351f11299fb9c8710f21af37}\label{example__forward__kinematics_8m_ab941875b351f11299fb9c8710f21af37}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_speed\_UB@{Omega\_speed\_UB}}
+\index{Omega\_speed\_UB@{Omega\_speed\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_speed\_UB}{Omega\_speed\_UB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} Omega\+\_\+speed\+\_\+\+UB = 0}
+
+
+
+Definition at line 36 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}\label{example__forward__kinematics_8m_accca70dd1b73c6e1dc5caa8b295fe8c4}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!Omega\_UB@{Omega\_UB}}
+\index{Omega\_UB@{Omega\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{Omega\_UB}{Omega\_UB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} specifying the \mbox{\hyperlink{screwvel2dquat_8m_a7a229a4786deeddd59c6091247a8c8a6}{offset}} between the wrist and the elbow Omega\+\_\+\+UB = rotvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_ab941875b351f11299fb9c8710f21af37}{Omega\+\_\+speed\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_a7cd76eb3555d29b2e8dd12c8665a5a84}{Omega\+\_\+axis\+\_\+\+UB}})}
+
+
+
+Definition at line 124 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a13968af941a9ca94a6c7e813d6d82c0c}\label{example__forward__kinematics_8m_a13968af941a9ca94a6c7e813d6d82c0c}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!orientation\_tool\_0@{orientation\_tool\_0}}
+\index{orientation\_tool\_0@{orientation\_tool\_0}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{orientation\_tool\_0}{orientation\_tool\_0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} orientation\+\_\+tool\+\_\+0 = \mbox{[}0 1 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 194 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a7b29c864eb2598b90f089e4160021970}\label{example__forward__kinematics_8m_a7b29c864eb2598b90f089e4160021970}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!orientation\_tool\_0\_dot@{orientation\_tool\_0\_dot}}
+\index{orientation\_tool\_0\_dot@{orientation\_tool\_0\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{orientation\_tool\_0\_dot}{orientation\_tool\_0\_dot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} orientation\+\_\+tool\+\_\+0\+\_\+dot = \mbox{[}0 0 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 205 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a356e8fa06c69d1374df8d0c0be9118f4}\label{example__forward__kinematics_8m_a356e8fa06c69d1374df8d0c0be9118f4}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!orientation\_tool\_H@{orientation\_tool\_H}}
+\index{orientation\_tool\_H@{orientation\_tool\_H}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{orientation\_tool\_H}{orientation\_tool\_H}}
+{\footnotesize\ttfamily rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the hand around the wrist \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} orientation\+\_\+tool\+\_\+H = \mbox{[}0 1 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 129 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a3aedfead30800d117a9fe6b2aeb72501}\label{example__forward__kinematics_8m_a3aedfead30800d117a9fe6b2aeb72501}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!orientation\_tool\_H\_dot@{orientation\_tool\_H\_dot}}
+\index{orientation\_tool\_H\_dot@{orientation\_tool\_H\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{orientation\_tool\_H\_dot}{orientation\_tool\_H\_dot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} orientation\+\_\+tool\+\_\+\+H\+\_\+dot = \mbox{[}0 0 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 140 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a02e068bcdf1148feddea8123d4a51e23}\label{example__forward__kinematics_8m_a02e068bcdf1148feddea8123d4a51e23}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_BS@{P\_BS}}
+\index{P\_BS@{P\_BS}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_BS}{P\_BS}}
+{\footnotesize\ttfamily Forward kinematics computation P\+\_\+\+BS = dquat2pos(\mbox{\hyperlink{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}{P\+\_\+\+B\+S\+\_\+dq}})}
+
+
+
+Definition at line 71 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a74448f5cf3b062dd36818d0d82dde3a7}\label{example__forward__kinematics_8m_a74448f5cf3b062dd36818d0d82dde3a7}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_BS\_0@{P\_BS\_0}}
+\index{P\_BS\_0@{P\_BS\_0}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_BS\_0}{P\_BS\_0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} P\+\_\+\+B\+S\+\_\+0 = \mbox{[}a+\mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}} 0 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 95 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ac627011ead92a8a98225f74b955edb9d}\label{example__forward__kinematics_8m_ac627011ead92a8a98225f74b955edb9d}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_BS\_dot@{P\_BS\_dot}}
+\index{P\_BS\_dot@{P\_BS\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_BS\_dot}{P\_BS\_dot}}
+{\footnotesize\ttfamily P\+\_\+\+B\+S\+\_\+dot = dquat2vel(\mbox{\hyperlink{example__forward__kinematics_8m_af22780f13310a97741be11491fea80c4}{P\+\_\+\+B\+S\+\_\+dot\+\_\+dq}})}
+
+
+
+Definition at line 170 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_af22780f13310a97741be11491fea80c4}\label{example__forward__kinematics_8m_af22780f13310a97741be11491fea80c4}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_BS\_dot\_dq@{P\_BS\_dot\_dq}}
+\index{P\_BS\_dot\_dq@{P\_BS\_dot\_dq}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_BS\_dot\_dq}{P\_BS\_dot\_dq}}
+{\footnotesize\ttfamily P\+\_\+\+B\+S\+\_\+dot\+\_\+dq}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{example__forward__kinematics_8m_a3b38ef476d15214d88225d377923c5c1}{antisym\_P\_UB}}+...}
+\DoxyCodeLine{            \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{DQmult}}(DQconj(R\_UB),\mbox{\hyperlink{example__forward__kinematics_8m_a2f51f9e69b96e78b6619af2cd1cffd21}{antisym\_P\_LU}},R\_UB)+...}
+\DoxyCodeLine{            \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{DQmult}}(DQconj(\mbox{\hyperlink{example__forward__kinematics_8m_a7a080a977945f9df60bd57bdcffc1449}{R\_LU\_R\_UB}}),\mbox{\hyperlink{example__forward__kinematics_8m_a6fbedb35d37d1df6b33a6b8d38af25db}{antisym\_P\_HL}},\mbox{\hyperlink{example__forward__kinematics_8m_a7a080a977945f9df60bd57bdcffc1449}{R\_LU\_R\_UB}})+...}
+\DoxyCodeLine{            \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{DQmult}}(DQconj(\mbox{\hyperlink{example__forward__kinematics_8m_a5000069e4c2c68378b780382c4a9f80a}{R\_tot}}),\mbox{\hyperlink{example__forward__kinematics_8m_a19b66ab20d19f00197aee60a4d0a960b}{P\_HW\_dot\_dq}},\mbox{\hyperlink{example__forward__kinematics_8m_a5000069e4c2c68378b780382c4a9f80a}{R\_tot}})}
+
+\end{DoxyCode}
+
+
+Definition at line 166 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}\label{example__forward__kinematics_8m_adb37604cb75e878b4a82ad1bdf720993}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_BS\_dq@{P\_BS\_dq}}
+\index{P\_BS\_dq@{P\_BS\_dq}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_BS\_dq}{P\_BS\_dq}}
+{\footnotesize\ttfamily Forward kinematics computation for the \mbox{\hyperlink{line2dquat_8m_ac3507f05cf0a956b147d545b6ec51006}{line}} \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} P\+\_\+\+B\+S\+\_\+dq = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}}),P\+\_\+\+L\+E\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}{S\+\_\+tot}})}
+
+
+
+Definition at line 70 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a5a6f7a3ad94211e1edbefb56f071f65d}\label{example__forward__kinematics_8m_a5a6f7a3ad94211e1edbefb56f071f65d}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_e@{P\_e}}
+\index{P\_e@{P\_e}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_e}{P\_e}}
+{\footnotesize\ttfamily P\+\_\+e = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU),\mbox{\hyperlink{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}{P\+\_\+w}},S\+\_\+\+LU)}
+
+
+
+Definition at line 225 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a80fbb535c4a4bfcb53e9bd5c8022775e}\label{example__forward__kinematics_8m_a80fbb535c4a4bfcb53e9bd5c8022775e}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_elbow\_dq@{P\_elbow\_dq}}
+\index{P\_elbow\_dq@{P\_elbow\_dq}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_elbow\_dq}{P\_elbow\_dq}}
+{\footnotesize\ttfamily \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} P\+\_\+elbow\+\_\+dq = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(S\+\_\+\+LU),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,S\+\_\+\+LU)}
+
+
+
+Definition at line 102 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a19b66ab20d19f00197aee60a4d0a960b}\label{example__forward__kinematics_8m_a19b66ab20d19f00197aee60a4d0a960b}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_HW\_dot\_dq@{P\_HW\_dot\_dq}}
+\index{P\_HW\_dot\_dq@{P\_HW\_dot\_dq}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_HW\_dot\_dq}{P\_HW\_dot\_dq}}
+{\footnotesize\ttfamily P\+\_\+\+H\+W\+\_\+dot\+\_\+dq = \mbox{\hyperlink{example__forward__kinematics_8m_ab6b87eada5b8da07cb94b87cd0d23ab1}{vel2dquat}}(position\+\_\+tool\+\_\+\+H\+\_\+dot)}
+
+
+
+Definition at line 143 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a3aeb6dfb979d65d5a4d80f2a71d6740d}\label{example__forward__kinematics_8m_a3aeb6dfb979d65d5a4d80f2a71d6740d}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_LE@{P\_LE}}
+\index{P\_LE@{P\_LE}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_LE}{P\_LE}}
+{\footnotesize\ttfamily rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow \mbox{\hyperlink{example__forward__kinematics_8m_a5e71187c6b4c75a689977538f4cb1fa6}{position}} P\+\_\+\+LE = \mbox{[}\mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}} 0 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 67 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_af32752c0f9a79212597147b228004caa}\label{example__forward__kinematics_8m_af32752c0f9a79212597147b228004caa}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_UE@{P\_UE}}
+\index{P\_UE@{P\_UE}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_UE}{P\_UE}}
+{\footnotesize\ttfamily P\+\_\+\+UE = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(T\+\_\+\+W\+E\+\_\+\+R\+\_\+\+LU),P\+\_\+\+LW,T\+\_\+\+W\+E\+\_\+\+R\+\_\+\+LU)}
+
+
+
+Definition at line 162 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}\label{example__forward__kinematics_8m_afed56dfa116667abb29c9b4759a661f8}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!P\_w@{P\_w}}
+\index{P\_w@{P\_w}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{P\_w}{P\_w}}
+{\footnotesize\ttfamily P\+\_\+w = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}}),P\+\_\+\+B\+S\+\_\+0\+\_\+dq,\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}})}
+
+
+
+Definition at line 224 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a4c9cfde92734e47cddc6bf02b19fd2ef}\label{example__forward__kinematics_8m_a4c9cfde92734e47cddc6bf02b19fd2ef}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!position\_tool\_0\_dot@{position\_tool\_0\_dot}}
+\index{position\_tool\_0\_dot@{position\_tool\_0\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{position\_tool\_0\_dot}{position\_tool\_0\_dot}}
+{\footnotesize\ttfamily the reference \mbox{\hyperlink{dquat2linevel_8m_ac009e8732b214f1fe9b4ef91886abbb1}{orientation}} rate of \mbox{\hyperlink{example__forward__kinematics_8m_a1ff199e1b839f8424489df725dc8ce1d}{change}} position\+\_\+tool\+\_\+0\+\_\+dot = \mbox{[}0 0 0\mbox{]}\textquotesingle{}}
+
+
+
+Definition at line 206 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}\label{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!R\_HL@{R\_HL}}
+\index{R\_HL@{R\_HL}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{R\_HL}{R\_HL}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow R\+\_\+\+HL = \mbox{\hyperlink{example__forward__kinematics_8m_a5e93c672b13914b411f1d00ed60232f3}{rot2dquat}}(theta\+\_\+\+HL,\mbox{\hyperlink{example__forward__kinematics_8m_a74ccb7c6c6ab0cca2a23475e02fba6b3}{axis\+\_\+\+HL}})}
+
+
+
+Definition at line 120 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}\label{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!R\_LU@{R\_LU}}
+\index{R\_LU@{R\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{R\_LU}{R\_LU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} R\+\_\+\+LU = \mbox{\hyperlink{example__forward__kinematics_8m_a5e93c672b13914b411f1d00ed60232f3}{rot2dquat}}(\mbox{\hyperlink{example__forward__kinematics_8m_ad89586edf5825a10f3da8a27c2e122c4}{theta\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_ac32054604ca85ef76fa7ea4b2d1204fd}{axis\+\_\+\+LU}})}
+
+
+
+Definition at line 59 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a7a080a977945f9df60bd57bdcffc1449}\label{example__forward__kinematics_8m_a7a080a977945f9df60bd57bdcffc1449}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!R\_LU\_R\_UB@{R\_LU\_R\_UB}}
+\index{R\_LU\_R\_UB@{R\_LU\_R\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{R\_LU\_R\_UB}{R\_LU\_R\_UB}}
+{\footnotesize\ttfamily R\+\_\+\+L\+U\+\_\+\+R\+\_\+\+UB = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}{R\+\_\+\+LU}},R\+\_\+\+UB)}
+
+
+
+Definition at line 152 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a5000069e4c2c68378b780382c4a9f80a}\label{example__forward__kinematics_8m_a5000069e4c2c68378b780382c4a9f80a}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!R\_tot@{R\_tot}}
+\index{R\_tot@{R\_tot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{R\_tot}{R\_tot}}
+{\footnotesize\ttfamily R\+\_\+tot = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a2974c877c6ebcb87ad59dfb7840b67e8}{R\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}{R\+\_\+\+LU}},R\+\_\+\+UB)}
+
+
+
+Definition at line 153 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}\label{example__forward__kinematics_8m_afb8c2ad024bd28386cc7fb16497eb8c6}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!S\_HL\_dot@{S\_HL\_dot}}
+\index{S\_HL\_dot@{S\_HL\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{S\_HL\_dot}{S\_HL\_dot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the hand around the wrist there is no \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} component along the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} S\+\_\+\+H\+L\+\_\+dot = screwvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_a5f733a992131ad8cf6ee465d0b15909b}{Omega\+\_\+speed\+\_\+\+HL}},\mbox{\hyperlink{example__forward__kinematics_8m_ab6696c1f17e28b825e06a31a8d7da384}{Omega\+\_\+axis\+\_\+\+HL}},0,\mbox{[}0 0 0\mbox{]},\mbox{\hyperlink{example__forward__kinematics_8m_a12eee2228753389e003bfc2b5a9ca9f1}{S\+\_\+\+HL}})}
+
+
+
+Definition at line 178 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}\label{example__forward__kinematics_8m_a0330897f7172f219f45a2529a13c59bf}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!S\_LU\_dot@{S\_LU\_dot}}
+\index{S\_LU\_dot@{S\_LU\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{S\_LU\_dot}{S\_LU\_dot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} motion dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the lower arm around the elbow there is no \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} component along the \mbox{\hyperlink{readme_8txt_ab373248efcf9154cc1c72ba287a5f47e}{screw}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} S\+\_\+\+L\+U\+\_\+dot = screwvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_aed2ca75d6b96fa471a3d2429311a788e}{Omega\+\_\+speed\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_ac998b05a6aaf46312c2bd17cd2c536ba}{Omega\+\_\+axis\+\_\+\+LU}},0,\mbox{[}0 0 0\mbox{]},S\+\_\+\+LU)}
+
+
+
+Definition at line 86 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a1ad36f4cf94dbed3bbd5fe65bfb97caf}\label{example__forward__kinematics_8m_a1ad36f4cf94dbed3bbd5fe65bfb97caf}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!S\_LU\_S\_UB@{S\_LU\_S\_UB}}
+\index{S\_LU\_S\_UB@{S\_LU\_S\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{S\_LU\_S\_UB}{S\_LU\_S\_UB}}
+{\footnotesize\ttfamily S\+\_\+\+L\+U\+\_\+\+S\+\_\+\+UB = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(S\+\_\+\+LU,\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}})}
+
+
+
+Definition at line 215 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}\label{example__forward__kinematics_8m_a1407c3ec0c50ff04e08399eba25a8965}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!S\_tot@{S\_tot}}
+\index{S\_tot@{S\_tot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{S\_tot}{S\_tot}}
+{\footnotesize\ttfamily S\+\_\+tot = \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(\mbox{\hyperlink{example__forward__kinematics_8m_a53cc2aa44d7ecaca821b1efde6831e8b}{R\+\_\+\+LU}},\mbox{\hyperlink{example__forward__kinematics_8m_ae09131aaca66c775020b0d7b753896b1}{T\+\_\+\+ES}},R\+\_\+\+UB)}
+
+
+
+Definition at line 69 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}\label{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!S\_UB@{S\_UB}}
+\index{S\_UB@{S\_UB}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{S\_UB}{S\_UB}}
+{\footnotesize\ttfamily S\+\_\+\+UB = screw2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_acabdaf0c87511fda715130f39e7eca26}{theta\+\_\+\+UB}},d\+\_\+\+UB,\mbox{\hyperlink{example__forward__kinematics_8m_a6b5f63b81ea7556089cab3c8b61c0fac}{axis\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_aa30c5c2f1c981b44c17a7aa4d78fa3a6}{axispoint\+\_\+\+UB}})}
+
+
+
+Definition at line 91 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}\label{example__forward__kinematics_8m_ae154c3290177715293f394832db9bc24}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!S\_UB\_dot@{S\_UB\_dot}}
+\index{S\_UB\_dot@{S\_UB\_dot}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{S\_UB\_dot}{S\_UB\_dot}}
+{\footnotesize\ttfamily S\+\_\+\+U\+B\+\_\+dot = screwvel2dquat(\mbox{\hyperlink{example__forward__kinematics_8m_ab941875b351f11299fb9c8710f21af37}{Omega\+\_\+speed\+\_\+\+UB}},\mbox{\hyperlink{example__forward__kinematics_8m_a7cd76eb3555d29b2e8dd12c8665a5a84}{Omega\+\_\+axis\+\_\+\+UB}},0,\mbox{[}0 0 0\mbox{]},\mbox{\hyperlink{example__forward__kinematics_8m_a25042939bfade3502ee83b47d981cb51}{S\+\_\+\+UB}})}
+
+
+
+Definition at line 92 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ae09131aaca66c775020b0d7b753896b1}\label{example__forward__kinematics_8m_ae09131aaca66c775020b0d7b753896b1}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!T\_ES@{T\_ES}}
+\index{T\_ES@{T\_ES}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{T\_ES}{T\_ES}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} of the hand around the wrist T\+\_\+\+ES = trans2dquat(\mbox{[}1 0 0\mbox{]}\textquotesingle{},a)}
+
+
+
+Definition at line 60 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a1b1628477f7188392dc81f97a9efb3e3}\label{example__forward__kinematics_8m_a1b1628477f7188392dc81f97a9efb3e3}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!T\_WE@{T\_WE}}
+\index{T\_WE@{T\_WE}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{T\_WE}{T\_WE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{readme_8txt_acf4037ad1c167cbbebd3b5acb08ac885}{translation}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} specifying the \mbox{\hyperlink{screwvel2dquat_8m_a7a229a4786deeddd59c6091247a8c8a6}{offset}} between the elbow and the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} T\+\_\+\+WE = trans2dquat(\mbox{[}1 0 0\mbox{]}\textquotesingle{},\mbox{\hyperlink{example__forward__kinematics_8m_a6a809cf615f776f67c4cf7bda852e84a}{b}})}
+
+
+
+Definition at line 122 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_ad89586edf5825a10f3da8a27c2e122c4}\label{example__forward__kinematics_8m_ad89586edf5825a10f3da8a27c2e122c4}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!theta\_LU@{theta\_LU}}
+\index{theta\_LU@{theta\_LU}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{theta\_LU}{theta\_LU}}
+{\footnotesize\ttfamily instantaneous rotational \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{transvel2dquat_8m_a4920fb7a7067eb50c5240051b3a7b35e}{axis}} of the upper arm around the \mbox{\hyperlink{example__forward__kinematics_8m_ac142139516049c8478031912d5405300}{shoulder}} \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} \mbox{\hyperlink{dquat2linevel_8m_aae262089a92cec6138cab3a6a9259007}{parameters}} for the lower arm \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} around the elbow theta\+\_\+\+LU = 90}
+
+
+
+Definition at line 40 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a30ef17c931b8e28f04400b1ab6a63519}\label{example__forward__kinematics_8m_a30ef17c931b8e28f04400b1ab6a63519}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!vel\_P\_BS@{vel\_P\_BS}}
+\index{vel\_P\_BS@{vel\_P\_BS}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{vel\_P\_BS}{vel\_P\_BS}}
+{\footnotesize\ttfamily vel\+\_\+\+P\+\_\+\+BS = dquat2vel(\mbox{\hyperlink{example__forward__kinematics_8m_a4462663d4d137bde198a36ee1eb5b4fe}{vel\+\_\+\+P\+\_\+\+B\+S\+\_\+dq}})}
+
+
+
+Definition at line 78 of file example\+\_\+forward\+\_\+kinematics.\+m.
+
+\mbox{\Hypertarget{example__forward__kinematics_8m_a4462663d4d137bde198a36ee1eb5b4fe}\label{example__forward__kinematics_8m_a4462663d4d137bde198a36ee1eb5b4fe}} 
+\index{example\_forward\_kinematics.m@{example\_forward\_kinematics.m}!vel\_P\_BS\_dq@{vel\_P\_BS\_dq}}
+\index{vel\_P\_BS\_dq@{vel\_P\_BS\_dq}!example\_forward\_kinematics.m@{example\_forward\_kinematics.m}}
+\doxysubsubsection{\texorpdfstring{vel\_P\_BS\_dq}{vel\_P\_BS\_dq}}
+{\footnotesize\ttfamily vel\+\_\+\+P\+\_\+\+B\+S\+\_\+dq = \mbox{\hyperlink{example__forward__kinematics_8m_a04e130fe98a4d1495918061695a86a4b}{antisym\+\_\+\+UB}} + \mbox{\hyperlink{example__forward__kinematics_8m_a76289784c468fd45e05fe53c5d03ce99}{D\+Qmult}}(D\+Qconj(R\+\_\+\+UB),\mbox{\hyperlink{example__forward__kinematics_8m_af97b9256723af4dff8c4d9a155ddc8df}{antisym\+\_\+\+LU}},R\+\_\+\+UB)}
+
+
+
+Definition at line 77 of file example\+\_\+forward\+\_\+kinematics.\+m.
+

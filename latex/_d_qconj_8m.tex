@@ -1,0 +1,43 @@
+\hypertarget{_d_qconj_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/\+D\+Qconj.m File Reference}
+\label{_d_qconj_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/DQconj.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/DQconj.m}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{\hyperlink{_d_qconj_8m_a36246b88e4fc31d69777c2a4eb8e0fbe}{dq}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_d_qconj_8m_a36246b88e4fc31d69777c2a4eb8e0fbe}\label{_d_qconj_8m_a36246b88e4fc31d69777c2a4eb8e0fbe}} 
+\index{DQconj.m@{DQconj.m}!dq@{dq}}
+\index{dq@{dq}!DQconj.m@{DQconj.m}}
+\doxysubsubsection{\texorpdfstring{dq}{dq}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} dq}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DQconj(dv,WHICHCONJ)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\% \mbox{\hyperlink{_qinv_8m_a4d77b1553b43994fa4d917ff08c7b572}{DQCONJ}}   Dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} conjugate}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%    \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} = \mbox{\hyperlink{_qinv_8m_a4d77b1553b43994fa4d917ff08c7b572}{DQCONJ}}(DV) returns the dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} conjugate of the dual}
+\DoxyCodeLine{\%      \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} DV. DV (resp. \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}}) is a 8-\/\mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} representing a dual }
+\DoxyCodeLine{\%      \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} or an array 8*\mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} (column i represents dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} i)}
+\DoxyCodeLine{\%      where \mbox{\hyperlink{dquat2pos_8m_a903912ca2ee7419648bfee859faae8e9}{N}} is the number of dual \mbox{\hyperlink{_d_qmult_8m_ae83dec758608827949460c3a4b114cd4}{quaternions}}. The default type of }
+\DoxyCodeLine{\%      conjugate is 'point' (see below). \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} has the same \mbox{\hyperlink{_d_qinv_8m_a2e47409fc7526f797c7a6cf7793d9f8b}{size}} as DV.}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%    \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} = \mbox{\hyperlink{_qinv_8m_a4d77b1553b43994fa4d917ff08c7b572}{DQCONJ}}(DV,WHICHCONJ) returns the type of dual \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} conjugate}
+\DoxyCodeLine{\%       corresponding to WHICHCONJ (DV = \mbox{\hyperlink{dquat2screw_8m_a7c90f77c5d42d5f58bd17bcbde29e706}{Q0}}+eps*\mbox{\hyperlink{dquat2screw_8m_ad921a25b2a95c4684431dd9af2fb4e66}{Q1}}):}
+\DoxyCodeLine{\%         -\/ 'point': mixed conjugate: dV* = Q0*-\/eps*Q1* (used for point}
+\DoxyCodeLine{\%         transformations).}
+\DoxyCodeLine{\%         -\/ 'line': quaternion conjugate: dV* = Q0*+eps*Q1* (used for \mbox{\hyperlink{_install_8txt_a8bfb9be78a51aa8d7cd84e8f911cc626}{line}}}
+\DoxyCodeLine{\%         transformations).}
+\DoxyCodeLine{\%         -\/ 'other': dual number conjugate: dV* = Q0-\/eps*Q1}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% See also QCONJ}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file D\+Qconj.\+m.
+

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['max_401',['max',['../line2dquat_8m.html#a8842b33dc105fe3d8eb7129396554c99',1,'max(n2)~:&#160;line2dquat.m'],['../linevel2dquat_8m.html#ad34070687c7ff620cc38f90cf8b242b1',1,'max(tab_s) ~:&#160;linevel2dquat.m'],['../linevel2dquat_8m.html#a8842b33dc105fe3d8eb7129396554c99',1,'max(n2)~:&#160;linevel2dquat.m'],['../screwvel2dquat_8m.html#a568277198ebf73822567613f77857296',1,'max(tabn) ~:&#160;screwvel2dquat.m'],['../screwvel2dquat_8m.html#af0757ae712b673e5d634dbe09bd8c8da',1,'max(tabn2) ~:&#160;screwvel2dquat.m'],['../shortest_screw_motion_8m.html#a0cf3c85152528bf0b77a3e63b153176c',1,'max(bool):&#160;shortestScrewMotion.m']]],
+  ['min_402',['min',['../_d_qnorm_8m.html#a92ab6f813429cbcf82c900ecfc6055c3',1,'min(normq0):&#160;DQnorm.m'],['../_qinv_8m.html#a1fab373df78318eb5c36ed3d679a1506',1,'min(normp):&#160;Qinv.m'],['../rot2dquat_8m.html#af454f71acbbd928a7a15b37241e278a6',1,'min(n2):&#160;rot2dquat.m'],['../screw2dquat_8m.html#af454f71acbbd928a7a15b37241e278a6',1,'min(n2):&#160;screw2dquat.m'],['../trans2dquat_8m.html#af454f71acbbd928a7a15b37241e278a6',1,'min(n2):&#160;trans2dquat.m']]],
+  ['mod_403',['mod',['../dquat2rot_8m.html#aa98e49d6f044be50e7df1a04a24b8645',1,'mod():&#160;dquat2rot.m'],['../dquat2screw_8m.html#aa98e49d6f044be50e7df1a04a24b8645',1,'mod():&#160;dquat2screw.m']]]
+];

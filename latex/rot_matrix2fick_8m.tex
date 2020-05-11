@@ -1,0 +1,152 @@
+\hypertarget{rot_matrix2fick_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/rot\+Matrix2fick.m File Reference}
+\label{rot_matrix2fick_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/rotMatrix2fick.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/rotMatrix2fick.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textquotesingle{}Dual\+Quaternion\+:rot\+Matrix2fick\+:wrong\+Number\+Of\+Outputs\textquotesingle{},... \textquotesingle{}You specified \%\mbox{\hyperlink{shortest_screw_motion_8m_a7cf6eba65898c942c500780cedfadd01}{d}} outputs. It should be 2(see documentation \mbox{\hyperlink{rot_matrix2fick_8m_a7abc1d7d07997b527ca1f49acc8b6103}{nargout}} ()
+\item 
+if \mbox{\hyperlink{rot_matrix2fick_8m_a6a99f255fefe37b6974eb076f71a20b6}{sM}} (1) $\sim$
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{rot_matrix2fick_8m_a2a613f44056ad173fccb1aa8c6519c9a}{newA}} (\+:,\+:, \mbox{\hyperlink{rot_matrix2fick_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}})
+\item 
+if \mbox{\hyperlink{rot_matrix2fick_8m_a67d377022950d93b06a11837751835bd}{ntensor}}$<$ 2$\vert$$\vert$\mbox{\hyperlink{rot_matrix2fick_8m_a67d377022950d93b06a11837751835bd}{ntensor}} $>$ \mbox{\hyperlink{rot_matrix2fick_8m_abb7cb68cd8f54d9903517748efeb9932}{error}} (\textquotesingle{}Dual\+Quaternion\+:rot\+Matrix2fick\+:wrongsize\textquotesingle{},... \textquotesingle{}The input is not a \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} matrix\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{[}vfick, vfick2\mbox{]}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{rot_matrix2fick_8m_a9cd3750f4fb066187238d29551e56a88}{A}} = \mbox{\hyperlink{dquat2fick_8m_a6beba05e8f005fdeaab1cbffea0abcea}{rot\+Matrix}}
+\item 
+just to make it shorter \mbox{\hyperlink{rot_matrix2fick_8m_a696b038745928853d48c669259ba2473}{isrot\+Mcell}} = iscell(\mbox{\hyperlink{rot_matrix2fick_8m_a9cd3750f4fb066187238d29551e56a88}{A}})
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a4d527e00e6cebcfd09b8a921aa21bc9c}{newA}} = \mbox{\hyperlink{shortest_screw_motion_8m_a84e0da62b452bb41f929d04680191afd}{zeros}}(3,3,\mbox{\hyperlink{vel2dquat_8m_aae9072f2409c9ad58a775549676e9339}{n}})
+\item 
+for \mbox{\hyperlink{rot_matrix2fick_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a52dbe92b7262f1c112ee7589f7e5ea08}{sM}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(curM)
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a67d377022950d93b06a11837751835bd}{ntensor}} = \mbox{\hyperlink{dquat2rot_8m_abfe669dfcdb0c0cab03c9af0671b619b}{length}}(\mbox{\hyperlink{rot_matrix2fick_8m_a6a99f255fefe37b6974eb076f71a20b6}{sM}})
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} construction of the Fick \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} \mbox{\hyperlink{rot_matrix2fick_8m_a96a7a8a049c5862a01e8f66f7504df72}{r31}} = \mbox{\hyperlink{rot_matrix2fick_8m_a9cd3750f4fb066187238d29551e56a88}{A}}(3,1,\+:)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rot_matrix2fick_8m_abb7cb68cd8f54d9903517748efeb9932}\label{rot_matrix2fick_8m_abb7cb68cd8f54d9903517748efeb9932}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!error@{error}}
+\index{error@{error}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily if \mbox{\hyperlink{rot_matrix2fick_8m_a67d377022950d93b06a11837751835bd}{ntensor}}$<$ 2 $\vert$$\vert$ \mbox{\hyperlink{rot_matrix2fick_8m_a67d377022950d93b06a11837751835bd}{ntensor}} $>$ error (\begin{DoxyParamCaption}\item[{\textquotesingle{}Dual\+Quaternion\+:rot\+Matrix2fick\+:wrongsize\textquotesingle{}}]{,  }\item[{... \textquotesingle{}The input is not a \mbox{\hyperlink{readme_8txt_a825b6035fa6a44c868703b9941f619fe}{rotation}} matrix\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a7abc1d7d07997b527ca1f49acc8b6103}\label{rot_matrix2fick_8m_a7abc1d7d07997b527ca1f49acc8b6103}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!nargout@{nargout}}
+\index{nargout@{nargout}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{nargout()}{nargout()}}
+{\footnotesize\ttfamily \textquotesingle{}Dual\+Quaternion\+:rot\+Matrix2fick\+:wrong\+Number\+Of\+Outputs\textquotesingle{},... \textquotesingle{}You specified \%\mbox{\hyperlink{shortest_screw_motion_8m_a7cf6eba65898c942c500780cedfadd01}{d}} outputs. It should be 2 (see documentation nargout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 45 of file dquat2trans.\+m.
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a2a613f44056ad173fccb1aa8c6519c9a}\label{rot_matrix2fick_8m_a2a613f44056ad173fccb1aa8c6519c9a}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!newA@{newA}}
+\index{newA@{newA}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{newA()}{newA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} newA (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{\+:}]{,  }\item[{\mbox{\hyperlink{rot_matrix2fick_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a6a99f255fefe37b6974eb076f71a20b6}\label{rot_matrix2fick_8m_a6a99f255fefe37b6974eb076f71a20b6}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!sM@{sM}}
+\index{sM@{sM}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{sM()}{sM()}}
+{\footnotesize\ttfamily if sM (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rot_matrix2fick_8m_a9cd3750f4fb066187238d29551e56a88}\label{rot_matrix2fick_8m_a9cd3750f4fb066187238d29551e56a88}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!A@{A}}
+\index{A@{A}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} A = \mbox{\hyperlink{dquat2fick_8m_a6beba05e8f005fdeaab1cbffea0abcea}{rot\+Matrix}}}
+
+
+
+Definition at line 40 of file rot\+Matrix2fick.\+m.
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}\label{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!function@{function}}
+\index{function@{function}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily function\mbox{[}vfick, vfick2\mbox{]}}
+
+
+
+Definition at line 1 of file rot\+Matrix2fick.\+m.
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_abf9d47cd7d4fbc942e618bb1977019c2}\label{rot_matrix2fick_8m_abf9d47cd7d4fbc942e618bb1977019c2}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!ii@{ii}}
+\index{ii@{ii}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{ii}{ii}}
+{\footnotesize\ttfamily for ii}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=1:\mbox{\hyperlink{_a_v2dquat_8m_aae9072f2409c9ad58a775549676e9339}{n}}}
+\DoxyCodeLine{        curM = \mbox{\hyperlink{rot_matrix2fick_8m_a9cd3750f4fb066187238d29551e56a88}{A}}\{1,\mbox{\hyperlink{rot_matrix2fick_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}}\}}
+
+\end{DoxyCode}
+
+
+Definition at line 46 of file rot\+Matrix2fick.\+m.
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a696b038745928853d48c669259ba2473}\label{rot_matrix2fick_8m_a696b038745928853d48c669259ba2473}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!isrotMcell@{isrotMcell}}
+\index{isrotMcell@{isrotMcell}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{isrotMcell}{isrotMcell}}
+{\footnotesize\ttfamily if isrot\+Mcell = iscell(\mbox{\hyperlink{rot_matrix2fick_8m_a9cd3750f4fb066187238d29551e56a88}{A}})}
+
+
+
+Definition at line 41 of file rot\+Matrix2fick.\+m.
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a4d527e00e6cebcfd09b8a921aa21bc9c}\label{rot_matrix2fick_8m_a4d527e00e6cebcfd09b8a921aa21bc9c}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!newA@{newA}}
+\index{newA@{newA}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{newA}{newA}}
+{\footnotesize\ttfamily newA = \mbox{\hyperlink{shortest_screw_motion_8m_a84e0da62b452bb41f929d04680191afd}{zeros}}(3,3,\mbox{\hyperlink{vel2dquat_8m_aae9072f2409c9ad58a775549676e9339}{n}})}
+
+
+
+Definition at line 45 of file rot\+Matrix2fick.\+m.
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a67d377022950d93b06a11837751835bd}\label{rot_matrix2fick_8m_a67d377022950d93b06a11837751835bd}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!ntensor@{ntensor}}
+\index{ntensor@{ntensor}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{ntensor}{ntensor}}
+{\footnotesize\ttfamily ntensor = \mbox{\hyperlink{dquat2rot_8m_abfe669dfcdb0c0cab03c9af0671b619b}{length}}(\mbox{\hyperlink{rot_matrix2fick_8m_a6a99f255fefe37b6974eb076f71a20b6}{sM}})}
+
+
+
+Definition at line 59 of file rot\+Matrix2fick.\+m.
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a96a7a8a049c5862a01e8f66f7504df72}\label{rot_matrix2fick_8m_a96a7a8a049c5862a01e8f66f7504df72}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!r31@{r31}}
+\index{r31@{r31}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{r31}{r31}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} construction of the Fick \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} r31 = \mbox{\hyperlink{rot_matrix2fick_8m_a9cd3750f4fb066187238d29551e56a88}{A}}(3,1,\+:)}
+
+
+
+Definition at line 72 of file rot\+Matrix2fick.\+m.
+
+\mbox{\Hypertarget{rot_matrix2fick_8m_a52dbe92b7262f1c112ee7589f7e5ea08}\label{rot_matrix2fick_8m_a52dbe92b7262f1c112ee7589f7e5ea08}} 
+\index{rotMatrix2fick.m@{rotMatrix2fick.m}!sM@{sM}}
+\index{sM@{sM}!rotMatrix2fick.m@{rotMatrix2fick.m}}
+\doxysubsubsection{\texorpdfstring{sM}{sM}}
+{\footnotesize\ttfamily else if sM = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(curM)}
+
+
+
+Definition at line 48 of file rot\+Matrix2fick.\+m.
+

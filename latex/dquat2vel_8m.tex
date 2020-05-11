@@ -1,0 +1,121 @@
+\hypertarget{dquat2vel_8m}{}\doxysection{C\+:/\+Users/\+Suresh/\+Downloads/\+Dual quaternion toolbox v3/\+Dual quaternion toolbox v3/dquat2vel.m File Reference}
+\label{dquat2vel_8m}\index{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/dquat2vel.m@{C:/Users/Suresh/Downloads/Dual quaternion toolbox v3/Dual quaternion toolbox v3/dquat2vel.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} which represents the point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is either a \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} or an array of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} $\ast$ \mbox{\hyperlink{dquat2vel_8m_a40e44da0834dde032a455fed0583a0ec}{N}} (each \% column represents a point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}}) where N is the \% number of points. \mbox{\hyperlink{line2dquat_8m_aebe701f64cbb7c9f88aa5ab5e8939817}{V}} is a \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} 3 or an array of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} 3 $\ast$N \% depending on the input format. \% \% See also \mbox{\hyperlink{line2dquat_8m_a4c8706509335c6926ec0f3b7ab65969d}{V\+E\+L2\+D\+Q\+U\+AT}}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong format if \mbox{\hyperlink{dquat2vel_8m_a199c4bfc4e2edcca3e97b779755a6be4}{sdq}} (1) $\sim$
+\item 
+if maxval \mbox{\hyperlink{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}{tol}} \mbox{\hyperlink{dquat2vel_8m_a28c289245c6d9891faec6bf33b02247b}{warning}} (\textquotesingle{}Dual\+Quaternion\+:dquat2vel\+:wrong\+Format\textquotesingle{},... \textquotesingle{}At least one dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} is not a point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}}(\mbox{\hyperlink{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}{tol}}=\%.\+1e).\textbackslash{}\mbox{\hyperlink{vel2dquat_8m_aae9072f2409c9ad58a775549676e9339}{n}} Indices of \mbox{\hyperlink{shortest_screw_motion_8m_a0cf3c85152528bf0b77a3e63b153176c}{max}} values\+:\%\mbox{\hyperlink{shortest_screw_motion_8m_a7cf6eba65898c942c500780cedfadd01}{d}}\textquotesingle{},... \mbox{\hyperlink{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}{tol}}, \mbox{\hyperlink{dquat2pos_8m_a2e1a5d1975a443aded4e70b107a717a1}{imax}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} \mbox{\hyperlink{dquat2vel_8m_a0d282fe410208db965aec44fa1ca4f5e}{v}}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} which represents the point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is either a \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} or an array of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} \mbox{\hyperlink{dquat2vel_8m_ad5072bfd9f6a223718f0f2c665dfd328}{D\+Q\+U\+A\+T2\+P\+OS}}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} which represents the point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is either a \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} or an array of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} \mbox{\hyperlink{dquat2vel_8m_a4a257fc7864e18956eae82d78ed7ddf7}{D\+Q\+U\+A\+T2\+L\+I\+NE}}
+\item 
+\mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} which represents the point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is either a \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} or an array of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} \mbox{\hyperlink{dquat2line_8m_a922f48b24d7f4b88ede23559fbf553c2}{D\+Q\+U\+A\+T2\+L\+I\+N\+E\+V\+EL}} \mbox{\hyperlink{dquat2vel_8m_a33b36f4975db1daead3c2ed957bf75f2}{sdq}} = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{vel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}})
+\item 
+if \mbox{\hyperlink{dquat2vel_8m_a642111d43ca7a862ea2d69301d12594f}{dq}} = dq\textquotesingle{}
+\item 
+\mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{dquat2screw_8m_aefa62af47d81153cd4dec5d2f6ac53d2}{check}} point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} \mbox{\hyperlink{dquat2vel_8m_a8ad7e6241c371d5d347e2443e4a72777}{tol}} = 1e-\/6
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dquat2vel_8m_a40e44da0834dde032a455fed0583a0ec}\label{dquat2vel_8m_a40e44da0834dde032a455fed0583a0ec}} 
+\index{dquat2vel.m@{dquat2vel.m}!N@{N}}
+\index{N@{N}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{N()}{N()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} which represents the point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is either a \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} or an array of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}$\ast$ N (\begin{DoxyParamCaption}\item[{each \% column represents a point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual}]{quaternion }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dquat2vel_8m_a199c4bfc4e2edcca3e97b779755a6be4}\label{dquat2vel_8m_a199c4bfc4e2edcca3e97b779755a6be4}} 
+\index{dquat2vel.m@{dquat2vel.m}!sdq@{sdq}}
+\index{sdq@{sdq}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{sdq()}{sdq()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} wrong format if sdq (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dquat2vel_8m_a28c289245c6d9891faec6bf33b02247b}\label{dquat2vel_8m_a28c289245c6d9891faec6bf33b02247b}} 
+\index{dquat2vel.m@{dquat2vel.m}!warning@{warning}}
+\index{warning@{warning}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily if maxval \mbox{\hyperlink{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}{tol}} warning (\begin{DoxyParamCaption}\item[{\textquotesingle{}Dual\+Quaternion\+:dquat2vel\+:wrong\+Format\textquotesingle{}}]{,  }\item[{... \textquotesingle{}At least one dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} is not a point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}}(\mbox{\hyperlink{shortest_rotation_8m_a8f41bf7ff55bff9b1a52e1050a8a3a01}{tol}}=\%.\+1e).\textbackslash{}\mbox{\hyperlink{vel2dquat_8m_aae9072f2409c9ad58a775549676e9339}{n}} Indices of \mbox{\hyperlink{shortest_screw_motion_8m_a0cf3c85152528bf0b77a3e63b153176c}{max}} values\+:\%\mbox{\hyperlink{shortest_screw_motion_8m_a7cf6eba65898c942c500780cedfadd01}{d}}\textquotesingle{}}]{,  }\item[{}]{tol,  }\item[{\mbox{\hyperlink{dquat2pos_8m_a2e1a5d1975a443aded4e70b107a717a1}{imax}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{dquat2vel_8m_a642111d43ca7a862ea2d69301d12594f}\label{dquat2vel_8m_a642111d43ca7a862ea2d69301d12594f}} 
+\index{dquat2vel.m@{dquat2vel.m}!dq@{dq}}
+\index{dq@{dq}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{dq}{dq}}
+{\footnotesize\ttfamily if dq = dq\textquotesingle{}}
+
+
+
+Definition at line 17 of file dquat2vel.\+m.
+
+\mbox{\Hypertarget{dquat2vel_8m_a4a257fc7864e18956eae82d78ed7ddf7}\label{dquat2vel_8m_a4a257fc7864e18956eae82d78ed7ddf7}} 
+\index{dquat2vel.m@{dquat2vel.m}!DQUAT2LINE@{DQUAT2LINE}}
+\index{DQUAT2LINE@{DQUAT2LINE}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{DQUAT2LINE}{DQUAT2LINE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} which represents the point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is either a \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} or an array of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} D\+Q\+U\+A\+T2\+L\+I\+NE}
+
+
+
+Definition at line 14 of file dquat2vel.\+m.
+
+\mbox{\Hypertarget{dquat2vel_8m_ad5072bfd9f6a223718f0f2c665dfd328}\label{dquat2vel_8m_ad5072bfd9f6a223718f0f2c665dfd328}} 
+\index{dquat2vel.m@{dquat2vel.m}!DQUAT2POS@{DQUAT2POS}}
+\index{DQUAT2POS@{DQUAT2POS}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{DQUAT2POS}{DQUAT2POS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rot_matrix2fick_8m_a15c01d2e7f4a84837dc85b8574db2a40}{function}} which represents the point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} \mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}} is either a \mbox{\hyperlink{transvel2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} or an array of \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}} D\+Q\+U\+A\+T2\+P\+OS}
+
+
+
+Definition at line 14 of file dquat2vel.\+m.
+
+\mbox{\Hypertarget{dquat2vel_8m_a33b36f4975db1daead3c2ed957bf75f2}\label{dquat2vel_8m_a33b36f4975db1daead3c2ed957bf75f2}} 
+\index{dquat2vel.m@{dquat2vel.m}!sdq@{sdq}}
+\index{sdq@{sdq}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{sdq}{sdq}}
+{\footnotesize\ttfamily sdq = \mbox{\hyperlink{vel2dquat_8m_acc4b605d53afd4d16859b89c27fdbc94}{size}}(\mbox{\hyperlink{vel2dquat_8m_a7599e09fa0cd1a62cd40ff50585d1802}{dq}})}
+
+
+
+Definition at line 16 of file dquat2vel.\+m.
+
+\mbox{\Hypertarget{dquat2vel_8m_a8ad7e6241c371d5d347e2443e4a72777}\label{dquat2vel_8m_a8ad7e6241c371d5d347e2443e4a72777}} 
+\index{dquat2vel.m@{dquat2vel.m}!tol@{tol}}
+\index{tol@{tol}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{tol}{tol}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} \mbox{\hyperlink{dquat2screw_8m_aefa62af47d81153cd4dec5d2f6ac53d2}{check}} point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} dual \mbox{\hyperlink{example__forward__kinematics_8m_ab83020fd321c365d7cc1df7df3bcef15}{quaternion}} tol = 1e-\/6}
+
+
+
+Definition at line 26 of file dquat2vel.\+m.
+
+\mbox{\Hypertarget{dquat2vel_8m_a0d282fe410208db965aec44fa1ca4f5e}\label{dquat2vel_8m_a0d282fe410208db965aec44fa1ca4f5e}} 
+\index{dquat2vel.m@{dquat2vel.m}!v@{v}}
+\index{v@{v}!dquat2vel.m@{dquat2vel.m}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \mbox{\hyperlink{screwvel2dquat_8m_ab56fc067109af8853a42f63a61e5f2d8}{end}} extraction of the point \mbox{\hyperlink{example__forward__kinematics_8m_ad9829a2b80c4ef5f556442b5d9bfa234}{velocity}} \mbox{\hyperlink{readme_8txt_a46d745057633bed71f27836259832644}{coordinates}} v}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= dquat2vel(\mbox{\hyperlink{dquat2vel_8m_a642111d43ca7a862ea2d69301d12594f}{dq}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\% \mbox{\hyperlink{dquat2line_8m_abd18389a93078876a99b8724ac5cb93a}{DQUAT2VEL}}  Transforms a \textcolor{keywordtype}{double} \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} point \mbox{\hyperlink{readme_8txt_a399384428ec2b7c6f6231df43c762ec3}{velocity}} representation}
+\DoxyCodeLine{\%            into a \mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} representation.}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\%     \mbox{\hyperlink{line2dquat_8m_aebe701f64cbb7c9f88aa5ab5e8939817}{V}} = \mbox{\hyperlink{dquat2line_8m_abd18389a93078876a99b8724ac5cb93a}{DQUAT2VEL}}(\mbox{\hyperlink{shortest_screw_motion_8m_a500146701c8cf9d2912e13727b4c1be3}{DQ}}) transforms the \textcolor{keywordtype}{double} \mbox{\hyperlink{readme_8txt_a07906917d33e6834f0fbb90b5a56db45}{quaternion}} representation of}
+\DoxyCodeLine{\%        a point \mbox{\hyperlink{readme_8txt_a399384428ec2b7c6f6231df43c762ec3}{velocity}} (in the euclidean space) into a \mbox{\hyperlink{line2dquat_8m_aed11160adfdc2ccfb47d70a00c83c3a9}{vector}} \mbox{\hyperlink{dquat2vel_8m_a0d282fe410208db965aec44fa1ca4f5e}{v}}}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file dquat2vel.\+m.
+
