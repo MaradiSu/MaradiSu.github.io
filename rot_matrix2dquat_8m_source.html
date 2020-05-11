@@ -69,20 +69,20 @@ $(function() {
 <div class="title">rotMatrix2dquat.m</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="rot_matrix2dquat_8m.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">function</span> <a class="code" href="shortest_screw_motion_8m.html#a500146701c8cf9d2912e13727b4c1be3">DQ</a> = rotMatrix2dquat(<a class="code" href="dquat2fick_8m.html#a6beba05e8f005fdeaab1cbffea0abcea">rotMatrix</a>)</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">function</span> DQ = rotMatrix2dquat(rotMatrix)</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% ROTMATRIX2DQUAT  transforms a 3*3 <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a> matrix into its <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a> dual</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;%                  <a class="code" href="readme_8txt.html#a07906917d33e6834f0fbb90b5a56db45">quaternion</a> representation</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;% ROTMATRIX2DQUAT  transforms a 3*3 rotation matrix into its rotation dual</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;%                  quaternion representation</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;%</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;%     <a class="code" href="shortest_screw_motion_8m.html#a500146701c8cf9d2912e13727b4c1be3">DQ</a> = ROTMATRIX2DQUAT(ROTMATRIX) returns the <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a> dual <a class="code" href="readme_8txt.html#a07906917d33e6834f0fbb90b5a56db45">quaternion</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;%     corresponding to the <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a> matrix ROTMATRIX.</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;%        - ROTMATRIX is a 3*3 array or a 3*3*<a class="code" href="dquat2pos_8m.html#a903912ca2ee7419648bfee859faae8e9">N</a> tensor (in which case,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;%     DQ = ROTMATRIX2DQUAT(ROTMATRIX) returns the rotation dual quaternion</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;%     corresponding to the rotation matrix ROTMATRIX.</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;%        - ROTMATRIX is a 3*3 array or a 3*3*N tensor (in which case,</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;%            ROTMATRIX(:,:,ii) is a 3*3 matrix representing the rotation</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;%            matrix corresponding to rotation ii. ROTMATRIX can also be a </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;%            1*N cell and each cell component ROTMATRIX{1,<a class="code" href="_d_qinv_8m.html#abf9d47cd7d4fbc942e618bb1977019c2">ii</a>} is the 3*3 </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;%            <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a> matrix of <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a> <a class="code" href="_d_qinv_8m.html#abf9d47cd7d4fbc942e618bb1977019c2">ii</a>.</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;%        - <a class="code" href="shortest_screw_motion_8m.html#a500146701c8cf9d2912e13727b4c1be3">DQ</a> is a <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a> dual <a class="code" href="readme_8txt.html#a07906917d33e6834f0fbb90b5a56db45">quaternion</a>. It is a 8*<a class="code" href="dquat2pos_8m.html#a903912ca2ee7419648bfee859faae8e9">N</a> array (column i</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;%            represents the <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a> i) where <a class="code" href="dquat2pos_8m.html#a903912ca2ee7419648bfee859faae8e9">N</a> is the number of rotations.</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;%            1*N cell and each cell component ROTMATRIX{1,ii} is the 3*3 </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;%            rotation matrix of rotation ii.</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;%        - DQ is a rotation dual quaternion. It is a 8*N array (column i</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;%            represents the rotation i) where N is the number of rotations.</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;%</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;% Useful reference: J. Funda, R. Taylor, R.Paul (1990), On homogeneous</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;% transforms, quaternions, and computational efficiency, IEEE transactions</div>
@@ -91,76 +91,76 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;% See also FICK2ROTMATRIX, DQUAT2ROTMATRIX, ROTMATRIX2FICK</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;A = rotMatrix; % just to make it shorter</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="rot_matrix2fick_8m.html#a696b038745928853d48c669259ba2473">isrotMcell</a> = iscell(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="dquat2line_8m.html#a3650192464ab5b704b48ddce087ceb13">tol</a> = 1e-5;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordflow">if</span> <a class="code" href="rot_matrix2fick_8m.html#a696b038745928853d48c669259ba2473">isrotMcell</a> == 1</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a> = <a class="code" href="dquat2rot_8m.html#abfe669dfcdb0c0cab03c9af0671b619b">length</a>(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="rot_matrix2fick_8m.html#a4d527e00e6cebcfd09b8a921aa21bc9c">newA</a> = <a class="code" href="_a_v2dquat_8m.html#a049c5466c43a3de163c4c577bd074d2c">zeros</a>(3,3,<a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span> <a class="code" href="_d_qinv_8m.html#abf9d47cd7d4fbc942e618bb1977019c2">ii</a>=1:<a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        curM = <a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>{1,<a class="code" href="_d_qinv_8m.html#abf9d47cd7d4fbc942e618bb1977019c2">ii</a>};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a> = <a class="code" href="_d_qinv_8m.html#a2e47409fc7526f797c7a6cf7793d9f8b">size</a>(curM);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(1) ~= 3 || <a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(2) ~= 3</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="dquat2line_8m.html#a61a8a11393edf1955620d099aeb770b4">error</a>(<span class="stringliteral">&#39;DualQuaternion:rotMatrix2dquat:wrongsize&#39;</span>,...</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;isrotMcell = iscell(A);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;tol = 1e-5;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordflow">if</span> isrotMcell == 1</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    n = length(A);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    newA = zeros(3,3,n);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span> ii=1:n</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        curM = A{1,ii};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        sM = size(curM);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> sM(1) ~= 3 || sM(2) ~= 3</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            error(<span class="stringliteral">&#39;DualQuaternion:rotMatrix2dquat:wrongsize&#39;</span>,...</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="stringliteral">&#39;Matrix size of rotation %d is %d*%d. It should be 3 and 3.&#39;</span>,...</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                 <a class="code" href="_d_qinv_8m.html#abf9d47cd7d4fbc942e618bb1977019c2">ii</a>,<a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(1),<a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(2));j</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="rot_matrix2fick_8m.html#a4d527e00e6cebcfd09b8a921aa21bc9c">newA</a>(:,:,<a class="code" href="_d_qinv_8m.html#abf9d47cd7d4fbc942e618bb1977019c2">ii</a>) = curM;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a> = <a class="code" href="rot_matrix2fick_8m.html#a4d527e00e6cebcfd09b8a921aa21bc9c">newA</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                 ii,sM(1),sM(2));j</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        end</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        newA(:,:,ii) = curM;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    end</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    A = newA;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordflow">else</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a> = <a class="code" href="_d_qinv_8m.html#a2e47409fc7526f797c7a6cf7793d9f8b">size</a>(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="rot_matrix2fick_8m.html#a67d377022950d93b06a11837751835bd">ntensor</a> = <a class="code" href="dquat2rot_8m.html#abfe669dfcdb0c0cab03c9af0671b619b">length</a>(<a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    sM = size(A);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    ntensor = length(sM);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> ntensor &lt; 2 || ntensor &gt; 3</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="dquat2line_8m.html#a61a8a11393edf1955620d099aeb770b4">error</a>(<span class="stringliteral">&#39;DualQuaternion:rotMatrix2dquat:wrongsize&#39;</span>,...</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        error(<span class="stringliteral">&#39;DualQuaternion:rotMatrix2dquat:wrongsize&#39;</span>,...</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="stringliteral">&#39;The input is not a rotation matrix&#39;</span>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(1) ~= 3 || <a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(2) ~= 3</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="dquat2line_8m.html#a61a8a11393edf1955620d099aeb770b4">error</a>(<span class="stringliteral">&#39;DualQuaternion:rotMatrix2dquat:wrongsize&#39;</span>,...</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> sM(1) ~= 3 || sM(2) ~= 3</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            error(<span class="stringliteral">&#39;DualQuaternion:rotMatrix2dquat:wrongsize&#39;</span>,...</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="stringliteral">&#39;First two dimensions of the tensor are %d and %d. It should be 3 and 3.&#39;</span>,...</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(1),<a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(2));</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> <a class="code" href="rot_matrix2fick_8m.html#a67d377022950d93b06a11837751835bd">ntensor</a> == 3</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a> = <a class="code" href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a>(3);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            sM(1),sM(2));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        end</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> ntensor == 3</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            n = sM(3);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a> = 1;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a>    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;% construction of the dual <a class="code" href="readme_8txt.html#a07906917d33e6834f0fbb90b5a56db45">quaternion</a> <a class="code" href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="shortest_screw_motion_8m.html#a500146701c8cf9d2912e13727b4c1be3">DQ</a> = <a class="code" href="_a_v2dquat_8m.html#a049c5466c43a3de163c4c577bd074d2c">zeros</a>(8,<a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;cur = 1+<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(1,1,:)+A(2,2,:)+A(3,3,:);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordflow">if</span> <a class="code" href="_d_qnorm_8m.html#a92ab6f813429cbcf82c900ecfc6055c3">min</a>(cur) &lt; 0 % which will lead to imaginary <a class="code" href="_d_qmult_8m.html#ae83dec758608827949460c3a4b114cd4">quaternions</a></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> <a class="code" href="_d_qnorm_8m.html#a92ab6f813429cbcf82c900ecfc6055c3">min</a>(cur) &lt; -<a class="code" href="dquat2line_8m.html#a3650192464ab5b704b48ddce087ceb13">tol</a></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="dquat2line_8m.html#ac7283b9844b49553448b431002d0ce9e">warning</a>(&#39;DualQuaternion:rotMatrix2dquat:BadInput&#39;,...</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            n = 1;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        end</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    end    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;end</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;% construction of the dual quaternion rotation</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;DQ = zeros(8,n);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;cur = 1+A(1,1,:)+A(2,2,:)+A(3,3,:);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordflow">if</span> min(cur) &lt; 0 % which will lead to imaginary quaternions</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> min(cur) &lt; -tol</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        warning(&#39;DualQuaternion:rotMatrix2dquat:BadInput&#39;,...</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            &#39;At least one 3*3 matrix is not a rotation matrix&#39;);    </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="dquat2rot_8m.html#a782b1687bb8fa41cc757de29b04b67c0">indneg</a> = find(cur &lt; 0);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        cur(<a class="code" href="dquat2rot_8m.html#a782b1687bb8fa41cc757de29b04b67c0">indneg</a>) = <a class="code" href="_a_v2dquat_8m.html#a049c5466c43a3de163c4c577bd074d2c">zeros</a>(1,<a class="code" href="dquat2rot_8m.html#abfe669dfcdb0c0cab03c9af0671b619b">length</a>(<a class="code" href="dquat2rot_8m.html#a782b1687bb8fa41cc757de29b04b67c0">indneg</a>));</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<a class="code" href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<a class="code" href="shortest_screw_motion_8m.html#a500146701c8cf9d2912e13727b4c1be3">DQ</a>(1,:) = sqrt(cur)/2; % cos(<a class="code" href="_a_v2dquat_8m.html#aebf487f5d315cb61f0bd86455edff1fd">theta</a>/2) component</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;DQ0 = <a class="code" href="shortest_screw_motion_8m.html#a500146701c8cf9d2912e13727b4c1be3">DQ</a>(1,:)&#39;;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        indneg = find(cur &lt; 0);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        cur(indneg) = zeros(1,length(indneg));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    end</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;end</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;DQ(1,:) = sqrt(cur)/2; % cos(theta/2) component</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;DQ0 = DQ(1,:)&#39;;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;nx = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(1,1,:));</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;ny = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(2,1,:));</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;nz = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(3,1,:));</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;ox = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(1,2,:));</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;oy = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(2,2,:));</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;oz = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(3,2,:));</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;ax = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(1,3,:));</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;ay = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(2,3,:));</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;az = squeeze(<a class="code" href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a>(3,3,:));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;nx = squeeze(A(1,1,:));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;ny = squeeze(A(2,1,:));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;nz = squeeze(A(3,1,:));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;ox = squeeze(A(1,2,:));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;oy = squeeze(A(2,2,:));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;oz = squeeze(A(3,2,:));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;ax = squeeze(A(1,3,:));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;ay = squeeze(A(2,3,:));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;az = squeeze(A(3,3,:));</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;xp = oz-ay; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;yp = ax-nz;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;zp = ny-ox;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;maxcomp = <a class="code" href="line2dquat_8m.html#a8842b33dc105fe3d8eb7129396554c99">max</a>([nx&#39; ; oy&#39; ; az&#39;])&#39;;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;maxcomp = max([nx&#39; ; oy&#39; ; az&#39;])&#39;;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;xpp = <a class="code" href="_a_v2dquat_8m.html#a049c5466c43a3de163c4c577bd074d2c">zeros</a>(<a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a>,1);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;ypp = <a class="code" href="_a_v2dquat_8m.html#a049c5466c43a3de163c4c577bd074d2c">zeros</a>(<a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a>,1);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;zpp = <a class="code" href="_a_v2dquat_8m.html#a049c5466c43a3de163c4c577bd074d2c">zeros</a>(<a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a>,1);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;signvar = <a class="code" href="_a_v2dquat_8m.html#a049c5466c43a3de163c4c577bd074d2c">zeros</a>(<a class="code" href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a>,1);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;xpp = zeros(n,1);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;ypp = zeros(n,1);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;zpp = zeros(n,1);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;signvar = zeros(n,1);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;xbig = maxcomp==nx;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;xpp(xbig) = nx(xbig)-oy(xbig)-az(xbig)+1;</div>
@@ -180,13 +180,13 @@ $(function() {
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;zpp(zbig) = az(zbig)-nx(zbig)-oy(zbig)+1;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;signvar(zbig) = sign(zp(zbig));</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;signvar(signvar==0) = ones(<a class="code" href="dquat2rot_8m.html#abfe669dfcdb0c0cab03c9af0671b619b">length</a>(find(signvar==0)));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;signvar(signvar==0) = ones(length(find(signvar==0)));</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;xppp = xp+signvar.*xpp;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;yppp = yp+signvar.*ypp;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;zppp = zp+signvar.*zpp;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<a class="code" href="shortest_screw_motion_8m.html#a500146701c8cf9d2912e13727b4c1be3">DQ</a>(2:4,:) = repmat(sqrt((1-DQ0.^2)./(xppp.^2+yppp.^2+zppp.^2)),1,3)&#39;.*[xppp yppp zppp]&#39;;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;DQ(2:4,:) = repmat(sqrt((1-DQ0.^2)./(xppp.^2+yppp.^2+zppp.^2)),1,3)&#39;.*[xppp yppp zppp]&#39;;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
@@ -194,30 +194,6 @@ $(function() {
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="a_d_qnorm_8m_html_a92ab6f813429cbcf82c900ecfc6055c3"><div class="ttname"><a href="_d_qnorm_8m.html#a92ab6f813429cbcf82c900ecfc6055c3">min</a></div><div class="ttdeci">if min(normq0)</div></div>
-<div class="ttc" id="areadme_8txt_html_a825b6035fa6a44c868703b9941f619fe"><div class="ttname"><a href="readme_8txt.html#a825b6035fa6a44c868703b9941f619fe">rotation</a></div><div class="ttdeci">The goal of this toolbox is to provide dual quaternion and use them in the framework of kinematics Everyone is invited to participate to the toolbox by including its own which fits the toolbox standards If you want your method incorporated in this send us an email to the address below Getting a line a rotation</div><div class="ttdef"><b>Definition:</b> <a href="readme_8txt_source.html#l00008">readme.txt:8</a></div></div>
-<div class="ttc" id="adquat2line_8m_html_a61a8a11393edf1955620d099aeb770b4"><div class="ttname"><a href="dquat2line_8m.html#a61a8a11393edf1955620d099aeb770b4">error</a></div><div class="ttdeci">LINE2DQUAT if nargout&lt; 2||nargout &gt; error('DualQuaternion:dquat2line:wrongNumberOfOutputs',... 'You specified %d outputs. It should be 2(see documentation).', nargout)</div></div>
-<div class="ttc" id="arot_matrix2fick_8m_html_a696b038745928853d48c669259ba2473"><div class="ttname"><a href="rot_matrix2fick_8m.html#a696b038745928853d48c669259ba2473">isrotMcell</a></div><div class="ttdeci">just to make it shorter isrotMcell</div><div class="ttdef"><b>Definition:</b> <a href="rot_matrix2fick_8m_source.html#l00041">rotMatrix2fick.m:41</a></div></div>
-<div class="ttc" id="ascrewvel2dquat_8m_html_ab56fc067109af8853a42f63a61e5f2d8"><div class="ttname"><a href="screwvel2dquat_8m.html#ab56fc067109af8853a42f63a61e5f2d8">end</a></div><div class="ttdeci">end[theta, d, axis, axispoint]</div><div class="ttdef"><b>Definition:</b> <a href="screwvel2dquat_8m_source.html#l00094">screwvel2dquat.m:95</a></div></div>
-<div class="ttc" id="a_d_qmult_8m_html_ae83dec758608827949460c3a4b114cd4"><div class="ttname"><a href="_d_qmult_8m.html#ae83dec758608827949460c3a4b114cd4">quaternions</a></div><div class="ttdeci">end if soptargin more than dual quaternions</div><div class="ttdef"><b>Definition:</b> <a href="_d_qmult_8m_source.html#l00038">DQmult.m:39</a></div></div>
-<div class="ttc" id="arot_matrix2fick_8m_html_a52dbe92b7262f1c112ee7589f7e5ea08"><div class="ttname"><a href="rot_matrix2fick_8m.html#a52dbe92b7262f1c112ee7589f7e5ea08">sM</a></div><div class="ttdeci">sM</div><div class="ttdef"><b>Definition:</b> <a href="rot_matrix2fick_8m_source.html#l00048">rotMatrix2fick.m:48</a></div></div>
-<div class="ttc" id="a_a_v2dquat_8m_html_aae9072f2409c9ad58a775549676e9339"><div class="ttname"><a href="_a_v2dquat_8m.html#aae9072f2409c9ad58a775549676e9339">n</a></div><div class="ttdeci">end n</div><div class="ttdef"><b>Definition:</b> <a href="_a_v2dquat_8m_source.html#l00025">AV2dquat.m:25</a></div></div>
-<div class="ttc" id="areadme_8txt_html_a07906917d33e6834f0fbb90b5a56db45"><div class="ttname"><a href="readme_8txt.html#a07906917d33e6834f0fbb90b5a56db45">quaternion</a></div><div class="ttdeci">The goal of this toolbox is to provide dual quaternion and use them in the framework of kinematics Everyone is invited to participate to the toolbox by including its own which fits the toolbox standards If you want your method incorporated in this send us an email to the address below Getting a line a a a do operations on dual the dual quaternion the retrieve parameters from a dual quaternion</div><div class="ttdef"><b>Definition:</b> <a href="readme_8txt_source.html#l00010">readme.txt:10</a></div></div>
-<div class="ttc" id="adquat2line_8m_html_ac7283b9844b49553448b431002d0ce9e"><div class="ttname"><a href="dquat2line_8m.html#ac7283b9844b49553448b431002d0ce9e">warning</a></div><div class="ttdeci">if maxval tol warning('DualQuaternion:dquat2line:wrongFormat',... 'At least one dual quaternion is not a line position dual quaternion(tol=%.1e).\n Indices of max values:%d \n Max value=%.2e',... tol, imax, maxval)</div></div>
-<div class="ttc" id="adquat2fick_8m_html_a6beba05e8f005fdeaab1cbffea0abcea"><div class="ttname"><a href="dquat2fick_8m.html#a6beba05e8f005fdeaab1cbffea0abcea">rotMatrix</a></div><div class="ttdeci">FICK2DQUAT rotMatrix</div><div class="ttdef"><b>Definition:</b> <a href="dquat2fick_8m_source.html#l00030">dquat2fick.m:30</a></div></div>
-<div class="ttc" id="a_d_qinv_8m_html_a2e47409fc7526f797c7a6cf7793d9f8b"><div class="ttname"><a href="_d_qinv_8m.html#a2e47409fc7526f797c7a6cf7793d9f8b">size</a></div><div class="ttdeci">dq size()</div></div>
-<div class="ttc" id="adquat2rot_8m_html_a782b1687bb8fa41cc757de29b04b67c0"><div class="ttname"><a href="dquat2rot_8m.html#a782b1687bb8fa41cc757de29b04b67c0">indneg</a></div><div class="ttdeci">indneg</div><div class="ttdef"><b>Definition:</b> <a href="dquat2rot_8m_source.html#l00046">dquat2rot.m:46</a></div></div>
-<div class="ttc" id="a_d_qinv_8m_html_abf9d47cd7d4fbc942e618bb1977019c2"><div class="ttname"><a href="_d_qinv_8m.html#abf9d47cd7d4fbc942e618bb1977019c2">ii</a></div><div class="ttdeci">for ii</div><div class="ttdef"><b>Definition:</b> <a href="_d_qinv_8m_source.html#l00035">DQinv.m:35</a></div></div>
-<div class="ttc" id="a_a_v2dquat_8m_html_aebf487f5d315cb61f0bd86455edff1fd"><div class="ttname"><a href="_a_v2dquat_8m.html#aebf487f5d315cb61f0bd86455edff1fd">theta</a></div><div class="ttdeci">theta</div><div class="ttdef"><b>Definition:</b> <a href="_a_v2dquat_8m_source.html#l00026">AV2dquat.m:26</a></div></div>
-<div class="ttc" id="arot_matrix2fick_8m_html_a4d527e00e6cebcfd09b8a921aa21bc9c"><div class="ttname"><a href="rot_matrix2fick_8m.html#a4d527e00e6cebcfd09b8a921aa21bc9c">newA</a></div><div class="ttdeci">newA</div><div class="ttdef"><b>Definition:</b> <a href="rot_matrix2fick_8m_source.html#l00045">rotMatrix2fick.m:45</a></div></div>
-<div class="ttc" id="arot_matrix2fick_8m_html_a9cd3750f4fb066187238d29551e56a88"><div class="ttname"><a href="rot_matrix2fick_8m.html#a9cd3750f4fb066187238d29551e56a88">A</a></div><div class="ttdeci">end A</div><div class="ttdef"><b>Definition:</b> <a href="rot_matrix2fick_8m_source.html#l00040">rotMatrix2fick.m:40</a></div></div>
-<div class="ttc" id="ashortest_screw_motion_8m_html_a500146701c8cf9d2912e13727b4c1be3"><div class="ttname"><a href="shortest_screw_motion_8m.html#a500146701c8cf9d2912e13727b4c1be3">DQ</a></div><div class="ttdeci">function AXISPOINT is the intersection point of the two AXISPOINT is the intersection point of the two lines DQ</div><div class="ttdef"><b>Definition:</b> <a href="shortest_screw_motion_8m_source.html#l00035">shortestScrewMotion.m:35</a></div></div>
-<div class="ttc" id="adquat2line_8m_html_a3650192464ab5b704b48ddce087ceb13"><div class="ttname"><a href="dquat2line_8m.html#a3650192464ab5b704b48ddce087ceb13">tol</a></div><div class="ttdeci">end check line position dual quaternion tol</div><div class="ttdef"><b>Definition:</b> <a href="dquat2line_8m_source.html#l00035">dquat2line.m:35</a></div></div>
-<div class="ttc" id="adquat2pos_8m_html_a903912ca2ee7419648bfee859faae8e9"><div class="ttname"><a href="dquat2pos_8m.html#a903912ca2ee7419648bfee859faae8e9">N</a></div><div class="ttdeci">function which represents the point coordinates DQ is either a vector of size or an array of size * N(each column represents a point position % dual quaternion) where N is the number of point locations. V is a % vector of size 3 or an array of size 3 *N depending on the input % format. % % See also POS2DQUAT</div></div>
-<div class="ttc" id="a_a_v2dquat_8m_html_a049c5466c43a3de163c4c577bd074d2c"><div class="ttname"><a href="_a_v2dquat_8m.html#a049c5466c43a3de163c4c577bd074d2c">zeros</a></div><div class="ttdeci">zeros(2, n)]</div></div>
-<div class="ttc" id="aline2dquat_8m_html_a8842b33dc105fe3d8eb7129396554c99"><div class="ttname"><a href="line2dquat_8m.html#a8842b33dc105fe3d8eb7129396554c99">max</a></div><div class="ttdeci">if max(n2)~</div></div>
-<div class="ttc" id="adquat2rot_8m_html_abfe669dfcdb0c0cab03c9af0671b619b"><div class="ttname"><a href="dquat2rot_8m.html#abfe669dfcdb0c0cab03c9af0671b619b">length</a></div><div class="ttdeci">if length(indthetaOK &gt; 0) repsin</div></div>
-<div class="ttc" id="arot_matrix2fick_8m_html_a67d377022950d93b06a11837751835bd"><div class="ttname"><a href="rot_matrix2fick_8m.html#a67d377022950d93b06a11837751835bd">ntensor</a></div><div class="ttdeci">ntensor</div><div class="ttdef"><b>Definition:</b> <a href="rot_matrix2fick_8m_source.html#l00059">rotMatrix2fick.m:59</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
